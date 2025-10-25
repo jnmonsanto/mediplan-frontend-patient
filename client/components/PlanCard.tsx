@@ -32,7 +32,7 @@ export function PlanCard({ plan }: PlanCardProps) {
           <span
             className={cn(
               "inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold",
-              difficultyColors[plan.difficulty]
+              difficultyColors[plan.difficulty],
             )}
           >
             {plan.difficulty.charAt(0).toUpperCase() + plan.difficulty.slice(1)}

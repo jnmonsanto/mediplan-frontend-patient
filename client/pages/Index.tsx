@@ -227,7 +227,7 @@ export default function Index() {
   const filteredPlans = mockPlans.filter(
     (plan) =>
       plan.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      plan.description.toLowerCase().includes(searchQuery.toLowerCase())
+      plan.description.toLowerCase().includes(searchQuery.toLowerCase()),
   );
 
   return (
@@ -250,9 +250,9 @@ export default function Index() {
               Your Personalized Exercise Plans
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl">
-              Follow carefully designed workout routines to improve your strength,
-              flexibility, and overall wellness. Choose a plan and start your
-              journey today.
+              Follow carefully designed workout routines to improve your
+              strength, flexibility, and overall wellness. Choose a plan and
+              start your journey today.
             </p>
           </div>
         </div>
@@ -273,9 +273,7 @@ export default function Index() {
         {/* Plans Grid */}
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {filteredPlans.length > 0 ? (
-            filteredPlans.map((plan) => (
-              <PlanCard key={plan.id} plan={plan} />
-            ))
+            filteredPlans.map((plan) => <PlanCard key={plan.id} plan={plan} />)
           ) : (
             <div className="col-span-full text-center py-12">
               <p className="text-muted-foreground text-lg">

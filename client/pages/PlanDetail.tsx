@@ -305,7 +305,7 @@ export default function PlanDetail() {
                 <span
                   className={cn(
                     "inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold whitespace-nowrap",
-                    difficultyColors[plan.difficulty]
+                    difficultyColors[plan.difficulty],
                   )}
                 >
                   {plan.difficulty.charAt(0).toUpperCase() +
@@ -363,27 +363,19 @@ export default function PlanDetail() {
                 <ul className="space-y-3 text-sm text-muted-foreground">
                   <li className="flex gap-2">
                     <span className="text-primary font-bold">•</span>
-                    <span>
-                      Warm up before starting this exercise plan
-                    </span>
+                    <span>Warm up before starting this exercise plan</span>
                   </li>
                   <li className="flex gap-2">
                     <span className="text-primary font-bold">•</span>
-                    <span>
-                      Maintain proper form over speed
-                    </span>
+                    <span>Maintain proper form over speed</span>
                   </li>
                   <li className="flex gap-2">
                     <span className="text-primary font-bold">•</span>
-                    <span>
-                      Rest between exercises as needed
-                    </span>
+                    <span>Rest between exercises as needed</span>
                   </li>
                   <li className="flex gap-2">
                     <span className="text-primary font-bold">•</span>
-                    <span>
-                      Stay hydrated throughout the session
-                    </span>
+                    <span>Stay hydrated throughout the session</span>
                   </li>
                 </ul>
               </div>

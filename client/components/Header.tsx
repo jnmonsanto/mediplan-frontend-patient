@@ -13,7 +13,9 @@ export function Header() {
             <Activity className="h-6 w-6 text-primary-foreground" />
           </div>
           <div className="flex flex-col">
-            <span className="text-lg font-bold text-foreground">ExercisePlan</span>
+            <span className="text-lg font-bold text-foreground">
+              ExercisePlan
+            </span>
             <span className="text-xs text-muted-foreground">Recovery Hub</span>
           </div>
         </Link>
@@ -25,7 +27,7 @@ export function Header() {
               "px-4 py-2 rounded-md text-sm font-medium transition-colors",
               location.pathname === "/"
                 ? "bg-primary text-primary-foreground"
-                : "text-foreground hover:bg-secondary"
+                : "text-foreground hover:bg-secondary",
             )}
           >
             Plans
