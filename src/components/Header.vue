@@ -29,19 +29,6 @@
         </div>
       </RouterLink>
 
-      <nav class="flex items-center gap-1">
-        <RouterLink
-          to="/"
-          :class="[
-            'px-4 py-2 rounded-md text-sm font-medium transition-colors',
-            $route.path === '/'
-              ? 'bg-primary text-primary-foreground'
-              : 'text-foreground hover:bg-secondary',
-          ]"
-        >
-          Plans
-        </RouterLink>
-      </nav>
     </div>
   </header>
 </template>
