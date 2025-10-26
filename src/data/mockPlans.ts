@@ -93,7 +93,7 @@ export const mockPlans: Plan[] = [
     duration: 25,
     difficulty: "intermediate",
     imageUrl:
-      "https://images.unsplash.com/photo-1517836357463-d25ddfcbf042?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1537241749862-ef0db15e8e55?w=500&h=400&fit=crop",
     videoUrl:
       "https://commondatastorage.googleapis.com/gtv-videos-library/sample/ForBiggerBlazes.mp4",
     exercises: [
