@@ -174,7 +174,7 @@
         </p>
         <button
           @click="$router.push('/')"
-          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-600 text-white hover:bg-primary-700 transition-colors"
         >
           <svg
             class="h-4 w-4"
