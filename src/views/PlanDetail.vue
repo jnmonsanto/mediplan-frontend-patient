@@ -6,7 +6,7 @@
       <!-- Back Button -->
       <button
         @click="$router.back()"
-        class="mb-8 inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium"
+        class="mb-8 inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 transition-colors font-medium"
       >
         <svg
           class="h-5 w-5"
