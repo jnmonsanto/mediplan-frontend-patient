@@ -77,7 +77,7 @@
                   />
                 </svg>
                 <div>
-                  <p class="text-xs text-primary-600/60">Duration</p>
+                  <p class="text-xs text-muted-foreground">Duration</p>
                   <p class="font-semibold text-primary-700">
                     {{ plan.duration }} minutes
                   </p>
@@ -98,7 +98,7 @@
                   />
                 </svg>
                 <div>
-                  <p class="text-xs text-primary-600/60">Exercises</p>
+                  <p class="text-xs text-muted-foreground">Exercises</p>
                   <p class="font-semibold text-primary-700">
                     {{ plan.exercises.length }} movements
                   </p>
