@@ -3,9 +3,9 @@
     class="flex gap-4 rounded-xl border border-border bg-card p-4 hover:bg-secondary/50 transition-colors"
   >
     <div
-      class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10"
+      class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-primary-100"
     >
-      <span class="text-lg font-bold text-primary">{{ index }}</span>
+      <span class="text-lg font-bold text-primary-600">{{ index }}</span>
     </div>
 
     <div class="flex-1">
