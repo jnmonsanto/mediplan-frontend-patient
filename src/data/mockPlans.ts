@@ -8,7 +8,7 @@ export const mockPlans: Plan[] = [
     duration: 15,
     difficulty: "beginner",
     imageUrl:
-      "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1552821206-e1f8bc31cc52?w=500&h=400&fit=crop",
     videoUrl:
       "https://commondatastorage.googleapis.com/gtv-videos-library/sample/BigBuckBunny.mp4",
     exercises: [
@@ -49,7 +49,7 @@ export const mockPlans: Plan[] = [
     duration: 30,
     difficulty: "intermediate",
     imageUrl:
-      "https://images.unsplash.com/photo-1583454110118-64bfb941b6be?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1533821884535-3e76f2be969f?w=500&h=400&fit=crop",
     videoUrl:
       "https://commondatastorage.googleapis.com/gtv-videos-library/sample/ElephantsDream.mp4",
     exercises: [
@@ -93,7 +93,7 @@ export const mockPlans: Plan[] = [
     duration: 25,
     difficulty: "intermediate",
     imageUrl:
-      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1609899753693-07c75dfe5307?w=500&h=400&fit=crop",
     videoUrl:
       "https://commondatastorage.googleapis.com/gtv-videos-library/sample/ForBiggerBlazes.mp4",
     exercises: [
@@ -176,7 +176,7 @@ export const mockPlans: Plan[] = [
     duration: 18,
     difficulty: "advanced",
     imageUrl:
-      "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=500&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=400&fit=crop",
     videoUrl:
       "https://commondatastorage.googleapis.com/gtv-videos-library/sample/ForBiggerMeltdowns.mp4",
     exercises: [
