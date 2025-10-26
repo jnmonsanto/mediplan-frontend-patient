@@ -8,28 +8,9 @@
         <div
           class="rounded-2xl bg-gradient-to-r from-primary/10 via-accent/5 to-primary/10 px-8 py-12 md:py-16"
         >
-          <div class="flex items-center gap-3 mb-4">
-            <div
-              class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary"
-            >
-              <svg
-                class="h-6 w-6 text-primary-foreground"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M13 10V3L4 14h7v7l9-11h-7z"
-                />
-              </svg>
-            </div>
-            <span class="text-sm font-semibold text-primary">
-              Recovery Hub
-            </span>
-          </div>
+          <span class="text-sm font-semibold text-primary mb-4 inline-block">
+            Recovery Hub
+          </span>
           <h1 class="text-4xl md:text-5xl font-bold text-foreground mb-3">
             Your Personalized Exercise Plans
           </h1>
