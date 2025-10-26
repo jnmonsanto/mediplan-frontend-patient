@@ -5,83 +5,54 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  /**
-   * Tailwind CSS theme
-   * Modern healthcare color scheme with teal primary and warm accents
-   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
-   * A different format will require also updating the theme in tailwind.config.ts.
-  */
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 47.4% 11.2%;
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 47.4% 11.2%;
+html {
+  scroll-behavior: smooth;
+}
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 47.4% 11.2%;
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
 
-    --primary: 175 58% 45%;
-    --primary-foreground: 0 0% 100%;
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
 
-    --secondary: 240 10% 95%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
 
-    --muted: 220 13% 91%;
-    --muted-foreground: 220 9% 46%;
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
 
-    --accent: 39 92% 50%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 175 58% 45%;
-
-    --radius: 0.75rem;
+@layer components {
+  .btn-primary {
+    @apply rounded-lg bg-blue-600 px-4 py-2 font-medium text-white transition-colors hover:bg-blue-700;
   }
 
-  .dark {
-    --background: 222.2 47.4% 11.2%;
-    --foreground: 0 0% 100%;
+  .btn-secondary {
+    @apply rounded-lg bg-neutral-200 px-4 py-2 font-medium text-neutral-900 transition-colors hover:bg-neutral-300;
+  }
 
-    --card: 222.2 47.4% 11.2%;
-    --card-foreground: 0 0% 100%;
+  .input-field {
+    @apply w-full rounded-lg border border-neutral-300 px-4 py-2 text-neutral-900 placeholder:text-neutral-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition;
+  }
 
-    --popover: 222.2 47.4% 11.2%;
-    --popover-foreground: 0 0% 100%;
-
-    --primary: 175 70% 50%;
-    --primary-foreground: 0 0% 0%;
-
-    --secondary: 240 10% 20%;
-    --secondary-foreground: 0 0% 100%;
-
-    --muted: 220 8% 30%;
-    --muted-foreground: 220 9% 70%;
-
-    --accent: 39 92% 60%;
-    --accent-foreground: 0 0% 0%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 220 8% 30%;
-    --input: 220 8% 30%;
-    --ring: 175 70% 50%;
+  .card {
+    @apply rounded-lg border border-neutral-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow;
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
   body {
-    @apply bg-background text-foreground;
+    @apply bg-neutral-50 text-neutral-900;
   }
 
   :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
