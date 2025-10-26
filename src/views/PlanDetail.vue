@@ -212,7 +212,6 @@ onMounted(() => {
   fetchPlans();
 });
 
-
 const difficultyColors: Record<string, string> = {
   beginner: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
   intermediate:

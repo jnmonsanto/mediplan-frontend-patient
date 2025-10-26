@@ -1,4 +1,4 @@
-import type { MediPlan } from '../types'
+import type { MediPlan } from "../types";
 
 export const mockPlans: MediPlan[] = [
   {
@@ -7,8 +7,10 @@ export const mockPlans: MediPlan[] = [
     description: "Get your body ready with dynamic stretching and light cardio",
     duration: 15,
     difficulty: "beginner",
-    imageUrl: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&h=400&fit=crop",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-library/sample/BigBuckBunny.mp4",
+    imageUrl:
+      "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&h=400&fit=crop",
+    videoUrl:
+      "https://commondatastorage.googleapis.com/gtv-videos-library/sample/BigBuckBunny.mp4",
     exercises: [
       {
         id: "1-1",
@@ -46,8 +48,10 @@ export const mockPlans: MediPlan[] = [
     description: "Build strength in shoulders, arms, and chest with resistance",
     duration: 30,
     difficulty: "intermediate",
-    imageUrl: "https://images.unsplash.com/photo-1583454110118-64bfb941b6be?w=500&h=400&fit=crop",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-library/sample/ElephantsDream.mp4",
+    imageUrl:
+      "https://images.unsplash.com/photo-1583454110118-64bfb941b6be?w=500&h=400&fit=crop",
+    videoUrl:
+      "https://commondatastorage.googleapis.com/gtv-videos-library/sample/ElephantsDream.mp4",
     exercises: [
       {
         id: "2-1",
@@ -88,8 +92,10 @@ export const mockPlans: MediPlan[] = [
     description: "Strengthen legs and improve lower body endurance",
     duration: 25,
     difficulty: "intermediate",
-    imageUrl: "https://images.unsplash.com/photo-1517836357463-d25ddfcbf042?w=500&h=400&fit=crop",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-library/sample/ForBiggerBlazes.mp4",
+    imageUrl:
+      "https://images.unsplash.com/photo-1517836357463-d25ddfcbf042?w=500&h=400&fit=crop",
+    videoUrl:
+      "https://commondatastorage.googleapis.com/gtv-videos-library/sample/ForBiggerBlazes.mp4",
     exercises: [
       {
         id: "3-1",
@@ -131,8 +137,10 @@ export const mockPlans: MediPlan[] = [
     description: "Improve range of motion and reduce muscle tension",
     duration: 20,
     difficulty: "beginner",
-    imageUrl: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500&h=400&fit=crop",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-library/sample/ForBiggerJoyrides.mp4",
+    imageUrl:
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500&h=400&fit=crop",
+    videoUrl:
+      "https://commondatastorage.googleapis.com/gtv-videos-library/sample/ForBiggerJoyrides.mp4",
     exercises: [
       {
         id: "4-1",
@@ -167,8 +175,10 @@ export const mockPlans: MediPlan[] = [
     description: "Strengthen your core for better stability and posture",
     duration: 18,
     difficulty: "advanced",
-    imageUrl: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=500&h=400&fit=crop",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-library/sample/ForBiggerMeltdowns.mp4",
+    imageUrl:
+      "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=500&h=400&fit=crop",
+    videoUrl:
+      "https://commondatastorage.googleapis.com/gtv-videos-library/sample/ForBiggerMeltdowns.mp4",
     exercises: [
       {
         id: "5-1",
@@ -204,4 +214,4 @@ export const mockPlans: MediPlan[] = [
       },
     ],
   },
-]
+];

@@ -1,5 +1,5 @@
-import api from '../config/api'
-import type { MediPlan } from '../types'
+import api from "../config/api";
+import type { MediPlan } from "../types";
 
 /**
  * Plans Service - Handles API calls to Strapi for plans
@@ -7,7 +7,7 @@ import type { MediPlan } from '../types'
  */
 
 // Mock data - will be replaced with actual API calls
-import { mockPlans } from '../data/mockPlans'
+import { mockPlans } from "../data/mockPlans";
 
 export const plansService = {
   /**
@@ -19,11 +19,11 @@ export const plansService = {
   async getPlans(): Promise<MediPlan[]> {
     try {
       // Simulating API call delay
-      await new Promise(resolve => setTimeout(resolve, 100))
-      return mockPlans
+      await new Promise((resolve) => setTimeout(resolve, 100));
+      return mockPlans;
     } catch (error) {
-      console.error('Error fetching plans:', error)
-      return mockPlans
+      console.error("Error fetching plans:", error);
+      return mockPlans;
     }
   },
 
@@ -35,13 +35,13 @@ export const plansService = {
    */
   async getPlanById(id: string): Promise<MediPlan | null> {
     try {
-      const plan = mockPlans.find(p => p.id === id)
-      return plan || null
+      const plan = mockPlans.find((p) => p.id === id);
+      return plan || null;
     } catch (error) {
-      console.error(`Error fetching plan ${id}:`, error)
-      return null
+      console.error(`Error fetching plan ${id}:`, error);
+      return null;
     }
   },
-}
+};
 
-export default plansService
+export default plansService;
