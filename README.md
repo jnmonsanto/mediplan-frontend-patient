@@ -134,6 +134,7 @@ async deletePlan(id: string): Promise<void>
 When you set up your Strapi backend, ensure your `plans` collection has these fields:
 
 **Plans Collection:**
+
 - `title` (String) - Plan name
 - `description` (String) - Plan description
 - `duration` (Number) - Duration in minutes
@@ -143,6 +144,7 @@ When you set up your Strapi backend, ensure your `plans` collection has these fi
 - `exercises` (Relation or Component) - Related exercises
 
 **Exercise Fields:**
+
 - `name` (String) - Exercise name
 - `description` (String) - Exercise description
 - `duration` (Number) - Duration in seconds
@@ -163,13 +165,17 @@ See `.env.example` for more options.
 ## Component Structure
 
 ### Header
+
 Navigation component with app branding and links.
 
 ### Home View
+
 Main page displaying a grid of exercise plans with search functionality.
 
 ### Plan Detail View
+
 Detailed page showing:
+
 - Video player
 - Plan description and metadata
 - Complete exercise sequence
@@ -177,9 +183,11 @@ Detailed page showing:
 - Start session button
 
 ### PlanCard
+
 Reusable card component for displaying plan previews in a grid.
 
 ### ExerciseItem
+
 Component for displaying individual exercises in a sequence list.
 
 ## Development Workflow
