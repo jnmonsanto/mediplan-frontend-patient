@@ -2,6 +2,25 @@
 
 A modern Vue.js frontend application for managing personalized exercise plans. Pre-configured for Strapi.js backend integration.
 
+## Table of Contents
+
+- [About](#about)
+- [Tech Stack](#tech-stack)
+- [Features](#features)
+- [Live Preview](#live-preview)
+- [Project Setup](#project-setup)
+  - [Install Dependencies](#install-dependencies)
+  - [Development Server](#development-server)
+  - [Build for Production](#build-for-production)
+  - [Type Checking](#type-checking)
+- [Project Structure](#project-structure)
+- [Strapi Integration Guide](#strapi-integration-guide)
+- [Component Structure](#component-structure)
+- [Development Workflow](#development-workflow)
+- [Deployment](#deployment)
+- [IDE Setup](#ide-setup)
+- [Resources](#resources)
+
 ## About
 
 MediPlan is a responsive healthcare application that allows users to browse and follow curated exercise plans. Each plan includes a video, description, and detailed exercise sequences with duration, sets, and reps information.
