@@ -100,7 +100,7 @@
                 <div>
                   <p class="text-xs text-neutral-500">Exercises</p>
                   <p class="font-semibold text-primary-700">
-                    {{ plan.exercises.length }} movements
+                    {{ plan?.exercises?.length || 0 }} movements
                   </p>
                 </div>
               </div>
