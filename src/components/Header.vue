@@ -24,7 +24,7 @@
           </svg>
         </div>
         <div class="flex flex-col">
-          <span class="text-lg font-bold text-foreground">ExercisePlan</span>
+          <span class="text-lg font-bold text-foreground">MediPlan</span>
           <span class="text-xs text-muted-foreground">Recovery Hub</span>
         </div>
       </RouterLink>
