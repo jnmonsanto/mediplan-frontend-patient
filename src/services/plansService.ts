@@ -33,7 +33,7 @@ export const plansService = {
    * const response = await fetch(`${api.baseURL}${api.endpoints.plan(id)}`)
    * return response.json()
    */
-  async getPlanById(id: string): Promise<MediPlan | null> {
+  async getPlanById(id: string): Promise<Plan | null> {
     try {
       const plan = mockPlans.find((p) => p.id === id);
       return plan || null;

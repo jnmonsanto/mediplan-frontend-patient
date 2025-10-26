@@ -1,6 +1,6 @@
-import type { MediPlan } from "../types";
+import type { Plan } from "../types";
 
-export const mockPlans: MediPlan[] = [
+export const mockPlans: Plan[] = [
   {
     id: "1",
     title: "Full Body Warm-up",
