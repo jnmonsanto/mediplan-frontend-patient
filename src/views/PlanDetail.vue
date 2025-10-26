@@ -8,8 +8,18 @@
         @click="$router.back()"
         class="mb-8 inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium"
       >
-        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        <svg
+          class="h-5 w-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 19l-7-7 7-7"
+          />
         </svg>
         Back to Plans
       </button>
@@ -19,12 +29,10 @@
         <div class="lg:col-span-2">
           <!-- Video Container -->
           <div class="mb-8">
-            <div class="relative w-full rounded-2xl overflow-hidden bg-black aspect-video">
-              <video
-                controls
-                class="w-full h-full"
-                :poster="plan.imageUrl"
-              >
+            <div
+              class="relative w-full rounded-2xl overflow-hidden bg-black aspect-video"
+            >
+              <video controls class="w-full h-full" :poster="plan.imageUrl">
                 <source :src="plan.videoUrl" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
@@ -45,7 +53,7 @@
               <span
                 :class="[
                   'inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold whitespace-nowrap',
-                  difficultyColors[plan.difficulty]
+                  difficultyColors[plan.difficulty],
                 ]"
               >
                 {{ capitalizeFirst(plan.difficulty) }}
@@ -55,8 +63,18 @@
             <!-- Plan Stats -->
             <div class="flex gap-6 pt-4 border-t border-border">
               <div class="flex items-center gap-2">
-                <svg class="h-5 w-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <svg
+                  class="h-5 w-5 text-primary"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
                 </svg>
                 <div>
                   <p class="text-xs text-muted-foreground">Duration</p>
@@ -66,8 +84,18 @@
                 </div>
               </div>
               <div class="flex items-center gap-2">
-                <svg class="h-5 w-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m0 0l8 4m-8-4v10l8 4m0-10l8-4m0 0v10l-8 4" />
+                <svg
+                  class="h-5 w-5 text-primary"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M20 7l-8-4-8 4m0 0l8 4m-8-4v10l8 4m0-10l8-4m0 0v10l-8 4"
+                  />
                 </svg>
                 <div>
                   <p class="text-xs text-muted-foreground">Exercises</p>
@@ -99,33 +127,23 @@
         <div class="lg:sticky lg:top-24 lg:h-fit">
           <div class="rounded-2xl border border-border bg-card p-6">
             <div class="mb-6">
-              <h3 class="font-semibold text-foreground mb-3">
-                Quick Tips
-              </h3>
+              <h3 class="font-semibold text-foreground mb-3">Quick Tips</h3>
               <ul class="space-y-3 text-sm text-muted-foreground">
                 <li class="flex gap-2">
                   <span class="text-primary font-bold">•</span>
-                  <span>
-                    Warm up before starting this exercise plan
-                  </span>
+                  <span> Warm up before starting this exercise plan </span>
                 </li>
                 <li class="flex gap-2">
                   <span class="text-primary font-bold">•</span>
-                  <span>
-                    Maintain proper form over speed
-                  </span>
+                  <span> Maintain proper form over speed </span>
                 </li>
                 <li class="flex gap-2">
                   <span class="text-primary font-bold">•</span>
-                  <span>
-                    Rest between exercises as needed
-                  </span>
+                  <span> Rest between exercises as needed </span>
                 </li>
                 <li class="flex gap-2">
                   <span class="text-primary font-bold">•</span>
-                  <span>
-                    Stay hydrated throughout the session
-                  </span>
+                  <span> Stay hydrated throughout the session </span>
                 </li>
               </ul>
             </div>
@@ -140,7 +158,9 @@
               </p>
             </div>
 
-            <button class="mt-6 w-full py-3 px-4 rounded-lg bg-accent text-accent-foreground font-semibold hover:bg-accent/90 transition-colors">
+            <button
+              class="mt-6 w-full py-3 px-4 rounded-lg bg-accent text-accent-foreground font-semibold hover:bg-accent/90 transition-colors"
+            >
               Start Session
             </button>
           </div>
@@ -148,9 +168,7 @@
       </div>
 
       <div v-else class="text-center py-12">
-        <h2 class="text-2xl font-bold text-foreground mb-2">
-          Plan not found
-        </h2>
+        <h2 class="text-2xl font-bold text-foreground mb-2">Plan not found</h2>
         <p class="text-muted-foreground mb-6">
           The exercise plan you're looking for doesn't exist.
         </p>
@@ -158,8 +176,18 @@
           @click="$router.push('/')"
           class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
         >
-          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          <svg
+            class="h-4 w-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"
+            />
           </svg>
           Back to Plans
         </button>
@@ -169,14 +197,14 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
-import Header from '../components/Header.vue'
-import ExerciseItem from '../components/ExerciseItem.vue'
-import type { ExercisePlan } from '../types'
+import { computed } from "vue";
+import { useRoute, useRouter } from "vue-router";
+import Header from "../components/Header.vue";
+import ExerciseItem from "../components/ExerciseItem.vue";
+import type { ExercisePlan } from "../types";
 
-const route = useRoute()
-const router = useRouter()
+const route = useRoute();
+const router = useRouter();
 
 const mockPlans: ExercisePlan[] = [
   {
@@ -185,8 +213,10 @@ const mockPlans: ExercisePlan[] = [
     description: "Get your body ready with dynamic stretching and light cardio",
     duration: 15,
     difficulty: "beginner",
-    imageUrl: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&h=400&fit=crop",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-library/sample/BigBuckBunny.mp4",
+    imageUrl:
+      "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&h=400&fit=crop",
+    videoUrl:
+      "https://commondatastorage.googleapis.com/gtv-videos-library/sample/BigBuckBunny.mp4",
     exercises: [
       {
         id: "1-1",
@@ -224,8 +254,10 @@ const mockPlans: ExercisePlan[] = [
     description: "Build strength in shoulders, arms, and chest with resistance",
     duration: 30,
     difficulty: "intermediate",
-    imageUrl: "https://images.unsplash.com/photo-1583454110118-64bfb941b6be?w=500&h=400&fit=crop",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-library/sample/ElephantsDream.mp4",
+    imageUrl:
+      "https://images.unsplash.com/photo-1583454110118-64bfb941b6be?w=500&h=400&fit=crop",
+    videoUrl:
+      "https://commondatastorage.googleapis.com/gtv-videos-library/sample/ElephantsDream.mp4",
     exercises: [
       {
         id: "2-1",
@@ -266,8 +298,10 @@ const mockPlans: ExercisePlan[] = [
     description: "Strengthen legs and improve lower body endurance",
     duration: 25,
     difficulty: "intermediate",
-    imageUrl: "https://images.unsplash.com/photo-1517836357463-d25ddfcbf042?w=500&h=400&fit=crop",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-library/sample/ForBiggerBlazes.mp4",
+    imageUrl:
+      "https://images.unsplash.com/photo-1517836357463-d25ddfcbf042?w=500&h=400&fit=crop",
+    videoUrl:
+      "https://commondatastorage.googleapis.com/gtv-videos-library/sample/ForBiggerBlazes.mp4",
     exercises: [
       {
         id: "3-1",
@@ -309,8 +343,10 @@ const mockPlans: ExercisePlan[] = [
     description: "Improve range of motion and reduce muscle tension",
     duration: 20,
     difficulty: "beginner",
-    imageUrl: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500&h=400&fit=crop",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-library/sample/ForBiggerJoyrides.mp4",
+    imageUrl:
+      "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500&h=400&fit=crop",
+    videoUrl:
+      "https://commondatastorage.googleapis.com/gtv-videos-library/sample/ForBiggerJoyrides.mp4",
     exercises: [
       {
         id: "4-1",
@@ -345,8 +381,10 @@ const mockPlans: ExercisePlan[] = [
     description: "Strengthen your core for better stability and posture",
     duration: 18,
     difficulty: "advanced",
-    imageUrl: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=500&h=400&fit=crop",
-    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-library/sample/ForBiggerMeltdowns.mp4",
+    imageUrl:
+      "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=500&h=400&fit=crop",
+    videoUrl:
+      "https://commondatastorage.googleapis.com/gtv-videos-library/sample/ForBiggerMeltdowns.mp4",
     exercises: [
       {
         id: "5-1",
@@ -382,18 +420,20 @@ const mockPlans: ExercisePlan[] = [
       },
     ],
   },
-]
+];
 
 const difficultyColors: Record<string, string> = {
   beginner: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
-  intermediate: "bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200",
+  intermediate:
+    "bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200",
   advanced: "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200",
-}
+};
 
 const plan = computed(() => {
-  const planId = route.params.planId as string
-  return mockPlans.find(p => p.id === planId)
-})
+  const planId = route.params.planId as string;
+  return mockPlans.find((p) => p.id === planId);
+});
 
-const capitalizeFirst = (str: string) => str.charAt(0).toUpperCase() + str.slice(1)
+const capitalizeFirst = (str: string) =>
+  str.charAt(0).toUpperCase() + str.slice(1);
 </script>
