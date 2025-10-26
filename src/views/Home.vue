@@ -73,11 +73,11 @@
 import { ref, computed } from "vue";
 import Header from "../components/Header.vue";
 import PlanCard from "../components/PlanCard.vue";
-import type { ExercisePlan } from "../types";
+import type { MediPlan } from "../types";
 
 const searchQuery = ref("");
 
-const mockPlans: ExercisePlan[] = [
+const mockPlans: MediPlan[] = [
   {
     id: "1",
     title: "Full Body Warm-up",

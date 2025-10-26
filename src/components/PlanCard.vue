@@ -81,10 +81,10 @@
 
 <script setup lang="ts">
 import { RouterLink } from "vue-router";
-import type { ExercisePlan } from "../types";
+import type { MediPlan } from "../types";
 
 interface Props {
-  plan: ExercisePlan;
+  plan: MediPlan;
 }
 
 defineProps<Props>();

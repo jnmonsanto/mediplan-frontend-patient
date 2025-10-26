@@ -201,12 +201,12 @@ import { computed } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import Header from "../components/Header.vue";
 import ExerciseItem from "../components/ExerciseItem.vue";
-import type { ExercisePlan } from "../types";
+import type { MediPlan } from "../types";
 
 const route = useRoute();
 const router = useRouter();
 
-const mockPlans: ExercisePlan[] = [
+const mockPlans: MediPlan[] = [
   {
     id: "1",
     title: "Full Body Warm-up",
