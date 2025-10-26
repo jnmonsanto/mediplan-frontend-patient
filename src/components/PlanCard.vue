@@ -62,7 +62,7 @@
           </div>
         </div>
         <svg
-          class="h-5 w-5 text-primary group-hover:translate-x-1 transition-transform"
+          class="h-5 w-5 text-primary-700 group-hover:translate-x-1 transition-transform"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
