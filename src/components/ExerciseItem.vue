@@ -9,9 +9,9 @@
     </div>
 
     <div class="flex-1">
-      <h4 class="font-semibold text-foreground">{{ exercise.name }}</h4>
+      <h4 class="font-semibold text-foreground">{{ exercise.exercise?.name }}</h4>
       <p class="mt-1 text-sm text-neutral-500">
-        {{ exercise.description }}
+        {{ exercise.exercise?.description }}
       </p>
 
       <div class="mt-3 flex flex-wrap gap-3">
@@ -71,10 +71,10 @@
 </template>
 
 <script setup lang="ts">
-import type { Exercise } from "../types";
+import type { PlanExercise } from "../types";
 
 interface Props {
-  exercise: Exercise;
+  exercise: PlanExercise;
   index: number;
 }
 
