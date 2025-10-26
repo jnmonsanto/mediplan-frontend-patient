@@ -32,10 +32,7 @@
           <span class="text-muted-foreground">{{ exercise.duration }}s</span>
         </div>
 
-        <div
-          v-if="exercise.sets"
-          class="flex items-center gap-1.5 text-xs"
-        >
+        <div v-if="exercise.sets" class="flex items-center gap-1.5 text-xs">
           <svg
             class="h-4 w-4 text-primary-600"
             fill="none"
@@ -52,10 +49,7 @@
           <span class="text-muted-foreground">{{ exercise.sets }} sets</span>
         </div>
 
-        <div
-          v-if="exercise.reps"
-          class="flex items-center gap-1.5 text-xs"
-        >
+        <div v-if="exercise.reps" class="flex items-center gap-1.5 text-xs">
           <svg
             class="h-4 w-4 text-primary-600"
             fill="none"

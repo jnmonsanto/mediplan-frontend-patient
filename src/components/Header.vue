@@ -8,7 +8,6 @@
       <RouterLink to="/" class="no-underline">
         <span class="text-lg font-bold text-primary-500">MediPlan</span>
       </RouterLink>
-
     </div>
   </header>
 </template>

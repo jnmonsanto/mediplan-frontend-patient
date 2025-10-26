@@ -148,7 +148,9 @@
               </ul>
             </div>
 
-            <div class="rounded-lg bg-primary-600/10 p-4 border border-primary-600/30">
+            <div
+              class="rounded-lg bg-primary-600/10 p-4 border border-primary-600/30"
+            >
               <p class="text-sm text-primary-600 font-medium mb-2">
                 💪 Keep it up!
               </p>
