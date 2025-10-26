@@ -116,8 +116,8 @@ const response = await fetch(url, { headers });
 When you're ready to add create/update functionality, extend the `plansService.ts` with new methods:
 
 ```typescript
-async createPlan(planData: MediPlan): Promise<MediPlan>
-async updatePlan(id: string, planData: MediPlan): Promise<MediPlan>
+async createPlan(planData: Plan): Promise<Plan>
+async updatePlan(id: string, planData: Plan): Promise<Plan>
 async deletePlan(id: string): Promise<void>
 ```
 
@@ -127,7 +127,7 @@ async deletePlan(id: string): Promise<void>
 - **src/services/plansService.ts** - Service layer for all API calls
 - **src/composables/usePlans.ts** - Vue composable for plans data fetching and management
 - **src/data/mockPlans.ts** - Mock data (easily replaceable with API calls)
-- **src/types.ts** - TypeScript interfaces (MediPlan, Exercise, etc.)
+- **src/types.ts** - TypeScript interfaces (Plan, Exercise, etc.)
 
 ### Expected Strapi Collection Structure
 
