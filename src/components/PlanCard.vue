@@ -41,7 +41,7 @@
 
       <div class="mt-4 flex items-center justify-between">
         <div class="flex items-center gap-4 text-sm">
-          <div class="flex items-center gap-1.5 text-muted-foreground">
+          <div class="flex items-center gap-1.5 text-muted-foreground/60">
             <svg
               class="h-4 w-4"
               fill="none"
@@ -57,7 +57,7 @@
             </svg>
             <span>{{ plan.exercises.length }} exercises</span>
           </div>
-          <div class="flex items-center gap-1.5 text-muted-foreground">
+          <div class="flex items-center gap-1.5 text-muted-foreground/60">
             <span>{{ plan.duration }} min</span>
           </div>
         </div>
