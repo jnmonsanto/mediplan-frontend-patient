@@ -64,7 +64,7 @@
             <div class="flex gap-6 pt-4 border-t border-border">
               <div class="flex items-center gap-2">
                 <svg
-                  class="h-5 w-5 text-primary"
+                  class="h-5 w-5 text-primary-600"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -77,15 +77,15 @@
                   />
                 </svg>
                 <div>
-                  <p class="text-xs text-muted-foreground">Duration</p>
-                  <p class="font-semibold text-foreground">
+                  <p class="text-xs text-primary-600/60">Duration</p>
+                  <p class="font-semibold text-primary-700">
                     {{ plan.duration }} minutes
                   </p>
                 </div>
               </div>
               <div class="flex items-center gap-2">
                 <svg
-                  class="h-5 w-5 text-primary"
+                  class="h-5 w-5 text-primary-600"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -98,8 +98,8 @@
                   />
                 </svg>
                 <div>
-                  <p class="text-xs text-muted-foreground">Exercises</p>
-                  <p class="font-semibold text-foreground">
+                  <p class="text-xs text-primary-600/60">Exercises</p>
+                  <p class="font-semibold text-primary-700">
                     {{ plan.exercises.length }} movements
                   </p>
                 </div>
@@ -148,18 +148,18 @@
               </ul>
             </div>
 
-            <div class="rounded-lg bg-primary/10 p-4 border border-primary/20">
-              <p class="text-sm text-primary font-medium mb-2">
+            <div class="rounded-lg bg-primary-600/10 p-4 border border-primary-600/30">
+              <p class="text-sm text-primary-600 font-medium mb-2">
                 💪 Keep it up!
               </p>
-              <p class="text-xs text-muted-foreground">
+              <p class="text-xs text-primary-600/70">
                 Complete this plan regularly for the best results. Consider
                 doing it 3-4 times per week.
               </p>
             </div>
 
             <button
-              class="mt-6 w-full py-3 px-4 rounded-lg bg-accent text-accent-foreground font-semibold hover:bg-accent/90 transition-colors"
+              class="mt-6 w-full py-3 px-4 rounded-lg bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-colors"
             >
               Start Session
             </button>

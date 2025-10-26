@@ -6,7 +6,7 @@
       class="container mx-auto px-4 md:px-8 flex h-16 items-center justify-between"
     >
       <RouterLink to="/" class="no-underline">
-        <span class="text-lg font-bold text-foreground">MediPlan</span>
+        <span class="text-lg font-bold text-primary-500">MediPlan</span>
       </RouterLink>
 
     </div>

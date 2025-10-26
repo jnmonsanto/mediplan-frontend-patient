@@ -6,12 +6,12 @@
       <!-- Hero Section -->
       <div class="mb-12">
         <div
-          class="rounded-2xl bg-gradient-to-r from-primary/10 via-accent/5 to-primary/10 px-8 py-12 md:py-16"
+          class="rounded-2xl bg-gradient-to-r from-primary-600 via-primary-500 to-primary-700 px-8 py-12 md:py-16"
         >
-          <h1 class="text-4xl md:text-5xl font-bold text-foreground mb-3">
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-3">
             Your Personalized Exercise Plans
           </h1>
-          <p class="text-lg text-muted-foreground max-w-2xl">
+          <p class="text-lg text-white/80 max-w-2xl">
             Follow carefully designed workout routines to improve your strength,
             flexibility, and overall wellness. Choose a plan and start your
             journey today.

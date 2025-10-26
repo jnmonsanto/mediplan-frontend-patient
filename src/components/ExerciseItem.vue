@@ -15,7 +15,7 @@
       </p>
 
       <div class="mt-3 flex flex-wrap gap-3">
-        <div class="flex items-center gap-1.5 text-xs text-muted-foreground">
+        <div class="flex items-center gap-1.5 text-xs text-primary-600 font-medium">
           <svg
             class="h-4 w-4"
             fill="none"
@@ -34,7 +34,7 @@
 
         <div
           v-if="exercise.sets"
-          class="flex items-center gap-1.5 text-xs text-muted-foreground"
+          class="flex items-center gap-1.5 text-xs text-primary-600 font-medium"
         >
           <svg
             class="h-4 w-4"
@@ -54,7 +54,7 @@
 
         <div
           v-if="exercise.reps"
-          class="flex items-center gap-1.5 text-xs text-muted-foreground"
+          class="flex items-center gap-1.5 text-xs text-primary-600 font-medium"
         >
           <svg
             class="h-4 w-4"
