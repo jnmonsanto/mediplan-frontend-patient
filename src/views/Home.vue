@@ -8,9 +8,6 @@
         <div
           class="rounded-2xl bg-gradient-to-r from-primary/10 via-accent/5 to-primary/10 px-8 py-12 md:py-16"
         >
-          <span class="text-sm font-semibold text-primary mb-4 inline-block">
-            Recovery Hub
-          </span>
           <h1 class="text-4xl md:text-5xl font-bold text-foreground mb-3">
             Your Personalized Exercise Plans
           </h1>
