@@ -197,16 +197,23 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, onMounted } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import Header from "../components/Header.vue";
 import ExerciseItem from "../components/ExerciseItem.vue";
-import type { MediPlan } from "../types";
+import usePlans from "../composables/usePlans";
 
 const route = useRoute();
 const router = useRouter();
+const { plans, fetchPlans } = usePlans();
 
-const mockPlans: MediPlan[] = [
+// Fetch plans on component mount
+onMounted(() => {
+  fetchPlans();
+});
+
+// Mock data - no longer needed here, using composable
+const mockPlans: any[] = [
   {
     id: "1",
     title: "Full Body Warm-up",
@@ -431,7 +438,7 @@ const difficultyColors: Record<string, string> = {
 
 const plan = computed(() => {
   const planId = route.params.planId as string;
-  return mockPlans.find((p) => p.id === planId);
+  return plans.value.find((p) => p.id === planId);
 });
 
 const capitalizeFirst = (str: string) =>
