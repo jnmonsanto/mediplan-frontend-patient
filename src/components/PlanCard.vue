@@ -33,7 +33,7 @@
           <h3 class="text-lg font-bold text-neutral-600 line-clamp-2">
             {{ plan.title }}
           </h3>
-          <p class="mt-2 text-sm text-neutral-400 line-clamp-2">
+          <p class="mt-2 text-sm text-neutral-500 line-clamp-2">
             {{ plan.description }}
           </p>
         </div>
@@ -41,7 +41,7 @@
 
       <div class="mt-4 flex items-center justify-between">
         <div class="flex items-center gap-4 text-sm">
-          <div class="flex items-center gap-1.5 text-neutral-400">
+          <div class="flex items-center gap-1.5 text-neutral-500">
             <svg
               class="h-4 w-4"
               fill="none"
@@ -57,7 +57,7 @@
             </svg>
             <span>{{ plan.exercises.length }} exercises</span>
           </div>
-          <div class="flex items-center gap-1.5 text-neutral-400">
+          <div class="flex items-center gap-1.5 text-neutral-500">
             <span>{{ plan.duration }} min</span>
           </div>
         </div>
