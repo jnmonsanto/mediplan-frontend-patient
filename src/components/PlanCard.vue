@@ -30,10 +30,10 @@
     <div class="p-5">
       <div class="flex items-start justify-between gap-3">
         <div class="flex-1">
-          <h3 class="text-lg font-bold text-foreground/70 line-clamp-2">
+          <h3 class="text-lg font-bold text-neutral-600 line-clamp-2">
             {{ plan.title }}
           </h3>
-          <p class="mt-2 text-sm text-muted-foreground/60 line-clamp-2">
+          <p class="mt-2 text-sm text-neutral-400 line-clamp-2">
             {{ plan.description }}
           </p>
         </div>
@@ -41,7 +41,7 @@
 
       <div class="mt-4 flex items-center justify-between">
         <div class="flex items-center gap-4 text-sm">
-          <div class="flex items-center gap-1.5 text-muted-foreground/60">
+          <div class="flex items-center gap-1.5 text-neutral-400">
             <svg
               class="h-4 w-4"
               fill="none"
@@ -57,7 +57,7 @@
             </svg>
             <span>{{ plan.exercises.length }} exercises</span>
           </div>
-          <div class="flex items-center gap-1.5 text-muted-foreground/60">
+          <div class="flex items-center gap-1.5 text-neutral-400">
             <span>{{ plan.duration }} min</span>
           </div>
         </div>
