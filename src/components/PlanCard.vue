@@ -30,10 +30,10 @@
     <div class="p-5">
       <div class="flex items-start justify-between gap-3">
         <div class="flex-1">
-          <h3 class="text-lg font-bold text-foreground line-clamp-2">
+          <h3 class="text-lg font-bold text-foreground/70 line-clamp-2">
             {{ plan.title }}
           </h3>
-          <p class="mt-2 text-sm text-muted-foreground line-clamp-2">
+          <p class="mt-2 text-sm text-muted-foreground/60 line-clamp-2">
             {{ plan.description }}
           </p>
         </div>
