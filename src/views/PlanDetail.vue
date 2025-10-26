@@ -46,7 +46,7 @@
                 <h1 class="text-3xl md:text-4xl font-bold text-foreground mb-2">
                   {{ plan.title }}
                 </h1>
-                <p class="text-lg text-muted-foreground">
+                <p class="text-lg text-neutral-500">
                   {{ plan.description }}
                 </p>
               </div>
@@ -77,7 +77,7 @@
                   />
                 </svg>
                 <div>
-                  <p class="text-xs text-muted-foreground">Duration</p>
+                  <p class="text-xs text-neutral-500">Duration</p>
                   <p class="font-semibold text-primary-700">
                     {{ plan.duration }} minutes
                   </p>
@@ -98,7 +98,7 @@
                   />
                 </svg>
                 <div>
-                  <p class="text-xs text-muted-foreground">Exercises</p>
+                  <p class="text-xs text-neutral-500">Exercises</p>
                   <p class="font-semibold text-primary-700">
                     {{ plan.exercises.length }} movements
                   </p>
@@ -128,7 +128,7 @@
           <div class="rounded-2xl border border-border bg-card p-6">
             <div class="mb-6">
               <h3 class="font-semibold text-foreground mb-3">Quick Tips</h3>
-              <ul class="space-y-3 text-sm text-muted-foreground">
+              <ul class="space-y-3 text-sm text-neutral-500">
                 <li class="flex gap-2">
                   <span class="text-primary font-bold">•</span>
                   <span> Warm up before starting this exercise plan </span>
@@ -152,7 +152,7 @@
               <p class="text-sm text-primary-600 font-medium mb-2">
                 💪 Keep it up!
               </p>
-              <p class="text-xs text-primary-600/70">
+              <p class="text-xs text-neutral-500">
                 Complete this plan regularly for the best results. Consider
                 doing it 3-4 times per week.
               </p>
@@ -169,7 +169,7 @@
 
       <div v-else class="text-center py-12">
         <h2 class="text-2xl font-bold text-foreground mb-2">Plan not found</h2>
-        <p class="text-muted-foreground mb-6">
+        <p class="text-neutral-500 mb-6">
           The exercise plan you're looking for doesn't exist.
         </p>
         <button

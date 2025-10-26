@@ -10,7 +10,7 @@
 
     <div class="flex-1">
       <h4 class="font-semibold text-foreground">{{ exercise.name }}</h4>
-      <p class="mt-1 text-sm text-muted-foreground">
+      <p class="mt-1 text-sm text-neutral-500">
         {{ exercise.description }}
       </p>
 
