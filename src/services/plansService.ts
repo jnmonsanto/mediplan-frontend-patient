@@ -1,5 +1,5 @@
 import api from "../config/api";
-import type { MediPlan } from "../types";
+import type { Plan } from "../types";
 
 /**
  * Plans Service - Handles API calls to Strapi for plans
@@ -16,7 +16,7 @@ export const plansService = {
    * const response = await fetch(`${api.baseURL}${api.endpoints.plans}`)
    * return response.json()
    */
-  async getPlans(): Promise<MediPlan[]> {
+  async getPlans(): Promise<Plan[]> {
     try {
       // Simulating API call delay
       await new Promise((resolve) => setTimeout(resolve, 100));

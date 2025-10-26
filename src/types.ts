@@ -7,7 +7,7 @@ export interface Exercise {
   sets?: number;
 }
 
-export interface MediPlan {
+export interface Plan {
   id: string;
   title: string;
   description: string;

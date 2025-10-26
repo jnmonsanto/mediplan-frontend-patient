@@ -1,13 +1,13 @@
 import { ref, computed } from "vue";
 import plansService from "../services/plansService";
-import type { MediPlan } from "../types";
+import type { Plan } from "../types";
 
 /**
  * Composable for fetching and managing plans data
  * Ready to integrate with Strapi - just update plansService.getPlans()
  */
 export function usePlans() {
-  const plans = ref<MediPlan[]>([]);
+  const plans = ref<Plan[]>([]);
   const loading = ref(false);
   const error = ref<string | null>(null);
 
