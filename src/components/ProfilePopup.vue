@@ -146,7 +146,9 @@
               v-if="doctor?.photo"
               :src="doctor.photo"
               :alt="doctor.name"
-              class="w-24 h-24 rounded-full object-cover border-2 border-primary-200"
+              class="rounded-full object-cover border-2 border-primary-200"
+              width="96"
+              height="96"
             />
           </div>
 
