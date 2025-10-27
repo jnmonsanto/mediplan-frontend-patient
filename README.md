@@ -18,6 +18,10 @@ A modern Vue.js frontend application for managing personalized exercise plans. P
   - [Password Reset](#password-reset)
   - [User Profile](#user-profile)
   - [Route Guards](#route-guards)
+- [Plan Search & Filtering](#plan-search--filtering)
+  - [Search Plans](#search-plans)
+  - [Sort Options](#sort-options)
+  - [Responsive Layout](#responsive-layout)
 - [Project Structure](#project-structure)
 - [Strapi Integration Guide](#strapi-integration-guide)
 - [Component Structure](#component-structure)
@@ -142,7 +146,7 @@ src/
 ├── config/           # Configuration files (API config)
 ├── data/             # Mock data
 ├── services/         # API service layer
-├── types.ts          # TypeScript type definitions
+���── types.ts          # TypeScript type definitions
 ├── views/            # Page components
 ├── App.vue           # Root component
 ├── global.css        # Global styles and theme
