@@ -137,6 +137,57 @@ MediPlan includes a complete authentication system for user login, password rese
 - **Session Check**: Auth status is verified on every route change
 - **Guard Configuration**: See `src/router.ts` for route definitions
 
+## Plan Search & Filtering
+
+MediPlan includes powerful search and filtering capabilities to help users find the right exercise plans.
+
+### Search Plans
+
+Users can search for plans by name or description using the search bar on the home page:
+- Real-time filtering as you type
+- Searches across plan title and description fields
+- Case-insensitive matching
+
+### Sort Options
+
+Plans can be sorted by:
+
+1. **Date Added**
+   - Newest first (default)
+   - Oldest first
+
+2. **Name**
+   - Alphabetical (A-Z)
+   - Reverse alphabetical (Z-A)
+
+3. **Difficulty**
+   - Beginner → Intermediate → Advanced
+   - Advanced → Intermediate → Beginner
+
+4. **Duration**
+   - Shortest first
+   - Longest first
+
+### Responsive Layout
+
+The search and sort controls adapt to different screen sizes:
+
+- **Mobile** (< 768px): Both elements stack vertically at full width
+- **Tablet** (768px - 1024px): Side-by-side at 50% width each
+- **Desktop** (> 1024px): Search bar takes 2/3 width, sort dropdown takes 1/3 width
+
+The responsive layout is implemented using Tailwind CSS utility classes:
+```html
+<div class="flex flex-col md:flex-row gap-3">
+  <div class="relative w-full md:w-1/2 lg:w-2/3">
+    <!-- Search input -->
+  </div>
+  <select class="w-full md:w-1/2 lg:w-1/3">
+    <!-- Sort options -->
+  </select>
+</div>
+```
+
 ## Project Structure
 
 ```
