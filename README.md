@@ -179,22 +179,24 @@ To integrate with Strapi, uncomment the actual API calls in:
 Authentication is implemented using the `useAuth()` composable in `src/composables/useAuth.ts`. To integrate with Strapi:
 
 **Login Integration:**
+
 ```typescript
 // In src/composables/useAuth.ts, update the login method:
 const response = await fetch(`${API_URL}/auth/local`, {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({ identifier: email, password })
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ identifier: email, password }),
 });
 const data = await response.json();
-localStorage.setItem('authToken', data.jwt);
-localStorage.setItem('user', JSON.stringify(data.user));
+localStorage.setItem("authToken", data.jwt);
+localStorage.setItem("user", JSON.stringify(data.user));
 ```
 
 **Protected Requests with Bearer Token:**
 Add bearer token to protected requests in `src/services/plansService.ts`:
+
 ```typescript
-const token = localStorage.getItem('authToken');
+const token = localStorage.getItem("authToken");
 const headers = {
   Authorization: `Bearer ${token}`,
   "Content-Type": "application/json",
@@ -204,6 +206,7 @@ const response = await fetch(url, { headers });
 
 **Password Reset:**
 Integrate with Strapi's forgot-password endpoint:
+
 ```typescript
 POST /auth/forgot-password
 Content-Type: application/json
@@ -274,6 +277,7 @@ Navigation component with app branding, profile icon, and responsive layout usin
 ### Login View
 
 Authentication page with:
+
 - Email and password inputs
 - Demo credentials display
 - "Forgot Password?" link
@@ -282,6 +286,7 @@ Authentication page with:
 ### Forgot Password View
 
 Password reset page with:
+
 - Email input for password reset request
 - Success/error message display
 - "Back to Login" link
@@ -290,6 +295,7 @@ Password reset page with:
 ### Home View
 
 Main page displaying a grid of exercise plans with:
+
 - Search functionality to filter plans
 - Responsive grid layout
 - Plan cards with difficulty badges
@@ -297,6 +303,7 @@ Main page displaying a grid of exercise plans with:
 ### Plan Detail View
 
 Detailed page showing:
+
 - Video player
 - Plan description and metadata
 - Complete exercise sequence
@@ -306,6 +313,7 @@ Detailed page showing:
 ### ProfilePopup Component
 
 User profile modal featuring:
+
 - Circular user photos (patient and doctor)
 - Two tabs: Patient and Doctor information
 - Patient details: name, email, phone, address, SNS ID, doctor name
@@ -317,6 +325,7 @@ User profile modal featuring:
 ### PlanCard
 
 Reusable card component for displaying plan previews in a grid with:
+
 - Plan image with overlay
 - Difficulty badge
 - Plan title and description

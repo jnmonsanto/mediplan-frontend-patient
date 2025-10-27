@@ -32,23 +32,25 @@ To integrate with Strapi, uncomment the actual API calls in:
 Authentication is now implemented using the `useAuth()` composable in `src/composables/useAuth.ts`.
 
 **Login with Strapi:**
+
 ```typescript
 // Update src/composables/useAuth.ts login() method:
 const response = await fetch(`${API_URL}/auth/local`, {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({ identifier: email, password })
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ identifier: email, password }),
 });
 const data = await response.json();
-localStorage.setItem('authToken', data.jwt);
-localStorage.setItem('user', JSON.stringify(data.user));
+localStorage.setItem("authToken", data.jwt);
+localStorage.setItem("user", JSON.stringify(data.user));
 isAuthenticated.value = true;
 ```
 
 **Protected API Calls with Bearer Token:**
+
 ```typescript
 // In src/services/plansService.ts:
-const token = localStorage.getItem('authToken');
+const token = localStorage.getItem("authToken");
 const headers = {
   Authorization: `Bearer ${token}`,
   "Content-Type": "application/json",
@@ -57,6 +59,7 @@ const response = await fetch(url, { headers });
 ```
 
 **Password Reset:**
+
 ```typescript
 // POST to Strapi forgot-password endpoint:
 POST /auth/forgot-password
@@ -64,6 +67,7 @@ POST /auth/forgot-password
 ```
 
 **Route Guards:**
+
 - Protected routes check authentication status via `beforeEach` guard in `src/router.ts`
 - Unauthenticated users are redirected to `/login`
 - Auth status persists via localStorage
