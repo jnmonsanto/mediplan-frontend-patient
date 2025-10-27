@@ -188,10 +188,10 @@
       <div class="px-6 py-4 border-t border-border">
         <button
           @click="handleLogout"
-          class="w-full flex items-center justify-center rounded-lg border border-red-300 px-4 py-2 text-sm font-medium text-red-600 transition-colors hover:bg-red-50"
+          class="w-full flex items-center justify-center rounded-lg border border-red-600 px-4 py-2 text-sm font-medium text-red-600 transition-colors hover:bg-[rgb(254_242_242)]"
         >
           <svg
-            class="h-4 w-4 mr-2"
+            class="h-4 w-4 mr-[10px]"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
