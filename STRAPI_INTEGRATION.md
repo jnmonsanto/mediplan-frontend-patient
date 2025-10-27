@@ -2,6 +2,14 @@
 
 This MediPlan application is pre-configured to work with a Strapi.js (Node) backend.
 
+## Live Preview
+
+Experience MediPlan in action:
+
+- **Login Screen**: [Try Demo Login](https://808e5f7a97f843f78cce7a00386948cf-2d559e7e06c54b458400d3111.projects.builder.codes/login?skipAuth=true) (authenticate with demo credentials: john@example.com / demo123)
+- **Dashboard**: [View Exercise Plans Dashboard](https://808e5f7a97f843f78cce7a00386948cf-2d559e7e06c54b458400d3111.projects.builder.codes/) (auto-authenticated)
+- **Plan Preview**: [View Sample Plan Details](https://808e5f7a97f843f78cce7a00386948cf-2d559e7e06c54b458400d3111.projects.builder.codes/plan/1)
+
 ## Current State
 
 The app currently uses **mock data** located in `src/data/mockPlans.ts` to demonstrate the UI and functionality.
