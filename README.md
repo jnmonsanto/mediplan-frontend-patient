@@ -174,18 +174,45 @@ To integrate with Strapi, uncomment the actual API calls in:
 - `getPlans()` - Fetches all plans
 - `getPlanById()` - Fetches a single plan by ID
 
-#### 3. Authentication (Future)
+#### 3. Authentication
 
-When authentication is implemented, add the Bearer token to requests in `src/services/plansService.ts`:
+Authentication is implemented using the `useAuth()` composable in `src/composables/useAuth.ts`. To integrate with Strapi:
 
+**Login Integration:**
 ```typescript
+// In src/composables/useAuth.ts, update the login method:
+const response = await fetch(`${API_URL}/auth/local`, {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ identifier: email, password })
+});
+const data = await response.json();
+localStorage.setItem('authToken', data.jwt);
+localStorage.setItem('user', JSON.stringify(data.user));
+```
+
+**Protected Requests with Bearer Token:**
+Add bearer token to protected requests in `src/services/plansService.ts`:
+```typescript
+const token = localStorage.getItem('authToken');
 const headers = {
   Authorization: `Bearer ${token}`,
   "Content-Type": "application/json",
 };
-
 const response = await fetch(url, { headers });
 ```
+
+**Password Reset:**
+Integrate with Strapi's forgot-password endpoint:
+```typescript
+POST /auth/forgot-password
+Content-Type: application/json
+
+{ "email": "user@example.com" }
+```
+
+**Route Protection:**
+Protected routes are configured in `src/router.ts` with `beforeEach` guard that checks auth status and redirects to `/login` if needed.
 
 #### 4. Data Posting (Future)
 
