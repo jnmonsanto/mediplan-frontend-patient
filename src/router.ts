@@ -12,6 +12,11 @@ const routes = [
     meta: { requiresAuth: false },
   },
   {
+    path: "/forgot-password",
+    component: ForgotPassword,
+    meta: { requiresAuth: false },
+  },
+  {
     path: "/",
     component: Home,
     meta: { requiresAuth: true },
