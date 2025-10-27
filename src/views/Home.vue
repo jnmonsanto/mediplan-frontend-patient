@@ -22,7 +22,7 @@
       <!-- Search and Sort Section -->
       <div class="mb-8 flex flex-col md:flex-row gap-3">
         <!-- Search -->
-        <div class="relative w-full md:w-2/3 lg:w-2/3">
+        <div class="relative w-full md:w-1/2 lg:w-2/3">
           <input
             v-model="searchQuery"
             type="text"
