@@ -35,6 +35,9 @@ MediPlan is a responsive healthcare application that allows users to browse and 
 
 ## Features
 
+- 🔐 User authentication with login and logout
+- 🔑 Password reset functionality
+- 👤 User profile with patient and doctor information
 - 📋 Browse multiple exercise plans with difficulty levels
 - 🔍 Search functionality to filter plans
 - 📺 Video player for demonstration
@@ -42,6 +45,7 @@ MediPlan is a responsive healthcare application that allows users to browse and 
 - 📱 Fully responsive design
 - 🎨 Modern healthcare-themed UI
 - 🔌 Pre-configured for Strapi backend integration
+- 🛡️ Route guards for authenticated pages
 
 ## Live Preview
 
