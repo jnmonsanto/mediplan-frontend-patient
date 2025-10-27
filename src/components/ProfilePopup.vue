@@ -1,5 +1,5 @@
 <template>
-  <div class="relative">
+  <div>
     <!-- Profile Icon Button -->
     <button
       @click="isOpen = !isOpen"
@@ -21,19 +21,21 @@
       </svg>
     </button>
 
-    <!-- Popup Modal Overlay -->
-    <div
-      v-if="isOpen"
-      class="fixed inset-0 z-40 bg-black/50 flex items-center justify-center"
-      @click="isOpen = false"
-    />
+    <!-- Teleport Modal to Body -->
+    <Teleport to="body">
+      <!-- Popup Modal Overlay -->
+      <div
+        v-if="isOpen"
+        class="fixed inset-0 z-40 bg-black/50"
+        @click="isOpen = false"
+      />
 
-    <!-- Popup Modal Content -->
-    <div
-      v-if="isOpen"
-      class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 bg-white rounded-2xl shadow-xl z-50 border border-border"
-      @click.stop
-    >
+      <!-- Popup Modal Content -->
+      <div
+        v-if="isOpen"
+        class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 bg-white rounded-2xl shadow-xl z-50 border border-border"
+        @click.stop
+      >
       <!-- Header -->
       <div class="px-6 py-4 border-b border-border">
         <h2 class="text-xl font-bold text-foreground">Profile</h2>
@@ -192,11 +194,12 @@
         </button>
       </div>
     </div>
+    </Teleport>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, Teleport } from "vue";
 import { useRouter } from "vue-router";
 import useAuth from "../composables/useAuth";
 
