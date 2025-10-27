@@ -41,7 +41,7 @@
         <h2 class="text-xl font-bold text-foreground">Profile</h2>
         <button
           @click="isOpen = false"
-          class="rounded-lg p-1 text-neutral-500 bg-neutral-100 hover:bg-neutral-200 hover:text-neutral-700 transition-colors"
+          class="rounded-lg p-1 text-neutral-500 hover:text-neutral-700 transition-colors"
         >
           <svg
             class="h-6 w-6"
