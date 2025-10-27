@@ -8,10 +8,13 @@
       <RouterLink to="/" class="no-underline">
         <span class="text-lg font-bold text-primary-500">MediPlan</span>
       </RouterLink>
+
+      <ProfilePopup />
     </div>
   </header>
 </template>
 
 <script setup lang="ts">
 import { RouterLink } from "vue-router";
+import ProfilePopup from "./ProfilePopup.vue";
 </script>
