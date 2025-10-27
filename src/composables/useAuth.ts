@@ -54,10 +54,19 @@ export function useAuth() {
       isAuthenticated.value = true;
       currentUser.value = loggedInPatient;
     } else {
-      // Auto-login with demo credentials on first load
-      isAuthenticated.value = true;
-      currentUser.value = loggedInPatient;
-      localStorage.setItem("isAuthenticated", "true");
+      // Check if we should skip auto-login (e.g., for login preview)
+      const params = new URLSearchParams(window.location.search);
+      const skipAuth = params.has("skipAuth");
+
+      if (!skipAuth) {
+        // Auto-login with demo credentials on first load
+        isAuthenticated.value = true;
+        currentUser.value = loggedInPatient;
+        localStorage.setItem("isAuthenticated", "true");
+      } else {
+        isAuthenticated.value = false;
+        currentUser.value = null;
+      }
     }
   };
 
