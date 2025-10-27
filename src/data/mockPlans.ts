@@ -1,35 +1,35 @@
 import type { Plan, Exercise, PlanExercise, Doctor, Patient } from "../types";
 
-// Mock doctors
-export const mockDoctors: Doctor[] = [
-  {
-    id: "doc-1",
-    name: "Dr. Sarah Johnson",
-    email: "sarah@mediplan.com",
-    phone: "+1 (555) 123-4567",
-    address: "123 Medical Center Dr, Boston, MA 02115",
-    photo:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop",
-    specialization: "Sports Medicine",
-    age: 42,
-  },
-];
+// Mock doctor - Single doctor for all plans
+const mockDoctor: Doctor = {
+  id: "doc-1",
+  name: "Dr. Sarah Johnson",
+  email: "sarah@mediplan.com",
+  phone: "+1 (555) 123-4567",
+  address: "123 Medical Center Dr, Boston, MA 02115",
+  photo:
+    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop",
+  specialization: "Sports Medicine",
+  age: 42,
+};
 
-// Mock patients
-export const mockPatients: Patient[] = [
-  {
-    id: "patient-1",
-    doctorId: "doc-1",
-    doctor: mockDoctors[0],
-    name: "John Doe",
-    email: "john@example.com",
-    phone: "+1 (555) 987-6543",
-    address: "456 Main St, Boston, MA 02116",
-    photo:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop",
-    snsId: "SNS-123456",
-  },
-];
+// Mock patient - Logged in user
+const mockPatient: Patient = {
+  id: "patient-1",
+  doctorId: "doc-1",
+  doctor: mockDoctor,
+  name: "John Doe",
+  email: "john@example.com",
+  phone: "+1 (555) 987-6543",
+  address: "456 Main St, Boston, MA 02116",
+  photo:
+    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop",
+  snsId: "SNS-123456",
+};
+
+// Export arrays for backward compatibility
+export const mockDoctors: Doctor[] = [mockDoctor];
+export const mockPatients: Patient[] = [mockPatient];
 
 // Mock exercises
 export const mockExercises: Exercise[] = [
