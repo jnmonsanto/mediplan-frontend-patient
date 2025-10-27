@@ -87,6 +87,47 @@ pnpm run build
 pnpm run typecheck
 ```
 
+## Authentication
+
+MediPlan includes a complete authentication system for user login, password reset, and profile management.
+
+### Login & Logout
+
+- **Login Page**: `/login` - Users can log in with email and password
+- **Demo Credentials**:
+  - Email: `john@example.com`
+  - Password: `demo123`
+- **Logout**: Available in the profile popup accessed via the profile icon in the header
+- **Auth State**: Managed by `useAuth()` composable in `src/composables/useAuth.ts`
+- **Session Persistence**: Auth state is persisted to localStorage
+
+### Password Reset
+
+- **Forgot Password Page**: `/forgot-password` - Accessible from the login page
+- **Password Reset Flow**: Users enter email to request a password reset link
+- **Integration Ready**: Service layer is prepared for Strapi authentication endpoints
+
+### User Profile
+
+- **Profile Popup**: Accessible via profile icon in header
+- **Patient Tab**: Displays patient information including:
+  - Patient photo
+  - Name, email, phone, address
+  - SNS ID
+  - Assigned doctor
+- **Doctor Tab**: Shows healthcare provider information including:
+  - Doctor photo
+  - Name, specialization, age
+  - Email, phone, address
+- **Logout Button**: Easy logout from the profile popup
+
+### Route Guards
+
+- **Protected Routes**: Home (`/`) and plan detail pages require authentication
+- **Automatic Redirect**: Unauthenticated users are redirected to `/login`
+- **Session Check**: Auth status is verified on every route change
+- **Guard Configuration**: See `src/router.ts` for route definitions
+
 ## Project Structure
 
 ```
