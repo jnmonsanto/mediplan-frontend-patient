@@ -33,14 +33,28 @@ const doctor = ref<Doctor | null>(assignedDoctor);
  * Composable for managing user authentication and current user state
  */
 export function useAuth() {
-  const login = (user: Patient) => {
-    currentUser.value = user;
+  const login = (user?: Patient) => {
+    // If no user provided, use the default logged-in patient
+    currentUser.value = user || loggedInPatient;
     isAuthenticated.value = true;
+    localStorage.setItem("isAuthenticated", "true");
   };
 
   const logout = () => {
     currentUser.value = null;
     isAuthenticated.value = false;
+    localStorage.removeItem("isAuthenticated");
+  };
+
+  const checkAuth = () => {
+    const auth = localStorage.getItem("isAuthenticated");
+    if (auth === "true") {
+      isAuthenticated.value = true;
+      currentUser.value = loggedInPatient;
+    } else {
+      isAuthenticated.value = false;
+      currentUser.value = null;
+    }
   };
 
   return {
@@ -49,6 +63,7 @@ export function useAuth() {
     doctor: computed(() => doctor.value),
     login,
     logout,
+    checkAuth,
   };
 }
 
