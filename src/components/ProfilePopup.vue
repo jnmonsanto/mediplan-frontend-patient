@@ -213,7 +213,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, provide } from "vue";
+import { ref } from "vue";
 import { useRouter } from "vue-router";
 import useAuth from "../composables/useAuth";
 
@@ -222,9 +222,6 @@ const isOpen = ref(false);
 const activeTab = ref<"patient" | "doctor">("patient");
 
 const { currentUser, doctor, logout } = useAuth();
-
-// Provide isOpen state for header dimming
-provide("profilePopupOpen", isOpen);
 
 const handleLogout = () => {
   logout();
