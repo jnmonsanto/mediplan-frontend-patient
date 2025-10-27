@@ -71,6 +71,16 @@
       <div class="px-6 py-6 max-h-96 overflow-y-auto space-y-4">
         <!-- Patient Tab -->
         <div v-if="activeTab === 'patient'" class="space-y-4">
+          <!-- Patient Photo -->
+          <div class="flex justify-center mb-4">
+            <img
+              v-if="currentUser?.photo"
+              :src="currentUser.photo"
+              :alt="currentUser.name"
+              class="w-24 h-24 rounded-full object-cover border-2 border-primary-200"
+            />
+          </div>
+
           <div>
             <label class="block text-xs font-semibold text-neutral-500 mb-1">
               Name
