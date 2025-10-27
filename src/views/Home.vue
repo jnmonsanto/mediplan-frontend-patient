@@ -2,7 +2,7 @@
   <div class="min-h-screen bg-background">
     <Header />
 
-    <main class="container mx-auto px-4 md:px-8 py-8 md:py-12">
+    <main class="mx-auto max-w-7xl px-4 md:px-8 py-8 md:py-12 sm:px-6 lg:px-8">
       <!-- Hero Section -->
       <div class="mb-12">
         <div
