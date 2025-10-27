@@ -202,6 +202,7 @@ export const mockPlans: Plan[] = [
     rating: 4.5,
     createdAt: new Date("2024-01-15"),
     updatedAt: new Date("2024-01-15"),
+    duration: 0, // Calculated from exercises
   },
   {
     id: "2",
@@ -226,6 +227,7 @@ export const mockPlans: Plan[] = [
     rating: 4.7,
     createdAt: new Date("2024-01-20"),
     updatedAt: new Date("2024-01-20"),
+    duration: 0, // Calculated from exercises
   },
   {
     id: "3",
@@ -250,6 +252,7 @@ export const mockPlans: Plan[] = [
     rating: 4.6,
     createdAt: new Date("2024-02-01"),
     updatedAt: new Date("2024-02-01"),
+    duration: 0, // Calculated from exercises
   },
   {
     id: "4",
@@ -274,6 +277,7 @@ export const mockPlans: Plan[] = [
     rating: 4.4,
     createdAt: new Date("2024-02-10"),
     updatedAt: new Date("2024-02-10"),
+    duration: 0, // Calculated from exercises
   },
   {
     id: "5",
@@ -298,5 +302,6 @@ export const mockPlans: Plan[] = [
     rating: 4.8,
     createdAt: new Date("2024-02-15"),
     updatedAt: new Date("2024-02-15"),
+    duration: 0, // Calculated from exercises
   },
 ];
