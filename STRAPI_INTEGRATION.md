@@ -97,16 +97,34 @@ async updatePlan(id: string, planData: Plan): Promise<Plan>
 async deletePlan(id: string): Promise<void>
 ```
 
+## Frontend Components
+
+### Key Components
+
+- **src/components/Header.vue** - Navigation with branding and profile button
+- **src/components/Footer.vue** - Footer with copyright (auto-updates year)
+- **src/components/ProfilePopup.vue** - User profile modal with logout
+- **src/components/PlanCard.vue** - Plan card component with images and metadata
+- **src/components/ExerciseItem.vue** - Exercise list item with sets, reps, duration
+
+### Pages
+
+- **src/views/Home.vue** - Plans listing with search and sort (8 sort options)
+- **src/views/PlanDetail.vue** - Plan details with video and exercise sequence
+- **src/views/Login.vue** - Login page with demo credentials
+- **src/views/ForgotPassword.vue** - Password reset page
+
 ## Architecture
 
 - **src/config/api.ts** - API configuration and endpoints
 - **src/services/plansService.ts** - Service layer for all API calls
 - **src/composables/usePlans.ts** - Vue composable for plans data fetching
 - **src/composables/useAuth.ts** - Vue composable for authentication
+- **src/composables/useProfilePopup.ts** - Profile popup state management
 - **src/data/mockPlans.ts** - Mock data (easily replaceable with API calls)
-- **src/views/Home.vue** - Plans listing with search and sort functionality
 - **src/types.ts** - TypeScript interfaces (Plan, Exercise, Patient, Doctor, etc.)
 - **src/router.ts** - Route definitions and auth guards
+- **src/utils/duration.ts** - Duration calculation utilities
 
 ## Expected Strapi Collection Structure
 
