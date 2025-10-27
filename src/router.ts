@@ -33,13 +33,12 @@ const router = createRouter({
   routes,
 });
 
-// Initialize auth on app load
-const { checkAuth } = useAuth();
-checkAuth();
-
 // Route guard to check authentication
 router.beforeEach((to, from, next) => {
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, initializeAuth } = useAuth();
+
+  // Initialize authentication on every route change
+  initializeAuth();
 
   const requiresAuth = to.meta.requiresAuth !== false;
 
