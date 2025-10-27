@@ -71,7 +71,7 @@
         </form>
 
         <!-- Demo Credentials -->
-        <div class="mt-6 pt-6 border-t border-neutral-200">
+        <div class="mt-6 pt-6 border-t border-neutral-200 mb-8">
           <p class="text-xs text-neutral-600 text-center mb-3">
             Demo Credentials:
           </p>
