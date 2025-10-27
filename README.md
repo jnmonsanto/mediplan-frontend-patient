@@ -207,6 +207,22 @@ src/
 └── router.ts         # Vue Router configuration
 ```
 
+## Design System
+
+### Colors
+
+- **Primary**: Blue color scheme (#0284c7)
+- **Neutral**: Grays for text and backgrounds (#f9fafb for main background)
+- **Red**: Alert and action colors (#dc2626)
+- **White**: Cards and interactive elements
+
+### Layout
+
+- **Max Width Constraint**: `max-w-7xl` for consistent centered layouts
+- **Responsive Padding**: `px-4 sm:px-6 lg:px-8` across all screen sizes
+- **Background**: App uses `bg-neutral-50` (rgb(249 250 251)) for main viewport
+- **Cards & Headers**: White (`bg-white`) for contrast
+
 ## Strapi Integration Guide
 
 This application is pre-configured to work with a Strapi.js backend. Currently, it uses mock data for demonstration.
