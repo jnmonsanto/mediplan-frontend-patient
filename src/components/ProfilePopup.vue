@@ -188,13 +188,18 @@
       <div class="px-6 py-4 border-t border-border">
         <button
           @click="handleLogout"
-          class="w-full flex items-center justify-center rounded-lg border border-red-600 px-4 py-2 text-sm font-medium text-red-600 transition-colors hover:bg-red-50"
+          class="w-full flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium transition-colors"
+          :style="{ borderColor: '#dc2626', color: '#dc2626', border: '1px solid #dc2626' }"
+          @mouseenter="$event.target.style.backgroundColor = '#fef2f2'"
+          @mouseleave="$event.target.style.backgroundColor = 'transparent'"
         >
           <svg
-            class="h-4 w-4 mr-[15px] stroke-red-600"
+            class="h-4 w-4 mr-[15px]"
             fill="none"
             stroke="currentColor"
+            stroke-width="2"
             viewBox="0 0 24 24"
+            :style="{ stroke: '#dc2626' }"
           >
             <path
               stroke-linecap="round"
