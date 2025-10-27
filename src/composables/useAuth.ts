@@ -27,8 +27,8 @@ const assignedDoctor: Doctor = {
   age: 42,
 };
 
-const isAuthenticated = ref(true);
-const currentUser = ref<Patient | null>(loggedInPatient);
+const isAuthenticated = ref(false);
+const currentUser = ref<Patient | null>(null);
 const doctor = ref<Doctor | null>(assignedDoctor);
 
 /**
@@ -54,8 +54,10 @@ export function useAuth() {
       isAuthenticated.value = true;
       currentUser.value = loggedInPatient;
     } else {
-      isAuthenticated.value = false;
-      currentUser.value = null;
+      // Auto-login with demo credentials on first load
+      isAuthenticated.value = true;
+      currentUser.value = loggedInPatient;
+      localStorage.setItem("isAuthenticated", "true");
     }
   };
 
