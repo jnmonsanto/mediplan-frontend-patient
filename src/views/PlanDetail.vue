@@ -204,6 +204,7 @@ import { useRoute, useRouter } from "vue-router";
 import Header from "../components/Header.vue";
 import ExerciseItem from "../components/ExerciseItem.vue";
 import usePlans from "../composables/usePlans";
+import { getPlanDurationInMinutes } from "../utils/duration";
 
 const route = useRoute();
 const router = useRouter();
