@@ -138,6 +138,16 @@
 
         <!-- Doctor Tab -->
         <div v-if="activeTab === 'doctor'" class="space-y-4">
+          <!-- Doctor Photo -->
+          <div class="flex justify-center mb-4">
+            <img
+              v-if="doctor?.photo"
+              :src="doctor.photo"
+              :alt="doctor.name"
+              class="w-24 h-24 rounded-full object-cover border-2 border-primary-200"
+            />
+          </div>
+
           <div>
             <label class="block text-xs font-semibold text-neutral-500 mb-1">
               Name
