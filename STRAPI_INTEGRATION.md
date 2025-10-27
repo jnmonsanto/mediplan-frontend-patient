@@ -145,3 +145,29 @@ Each exercise should have:
 - `duration` (Number)
 - `reps` (Number, optional)
 - `sets` (Number, optional)
+
+## Design & Styling
+
+### Visual Design
+
+- **Color Scheme**: Blue primary (#0284c7), neutral grays, and red accents
+- **Background**: Light neutral gray (`bg-neutral-50`, rgb(249 250 251)) for main app
+- **Cards**: White background for plan cards and interactive elements
+- **Typography**: Inter font family with responsive heading sizes
+
+### Responsive Design
+
+- **Header**: Fixed sticky positioning with max-width constraint
+- **Content**: Centered with `max-w-7xl` constraint
+- **Footer**: Matches header layout with automatic year display
+- **Grid**: Responsive (1 column mobile, 2 columns tablet, 3 columns desktop)
+- **Search/Sort**: Responsive layout (stacked on mobile, side-by-side on larger screens)
+
+### Layout Components
+
+The app uses consistent responsive padding:
+- Mobile: `px-4`
+- Tablet: `sm:px-6`
+- Desktop: `lg:px-8`
+
+All container components are centered with `max-w-7xl` and `mx-auto` for consistent layout.
