@@ -37,8 +37,26 @@
         @click.stop
       >
       <!-- Header -->
-      <div class="px-6 py-4 border-b border-border">
+      <div class="px-6 py-4 border-b border-border flex items-center justify-between">
         <h2 class="text-xl font-bold text-foreground">Profile</h2>
+        <button
+          @click="isOpen = false"
+          class="rounded-lg p-1 text-neutral-500 hover:bg-neutral-100 hover:text-neutral-700 transition-colors"
+        >
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
       </div>
 
       <!-- Tabs -->
