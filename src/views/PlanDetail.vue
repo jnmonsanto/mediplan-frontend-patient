@@ -40,7 +40,7 @@
           </div>
 
           <!-- Plan Title and Description -->
-          <div class="mb-8 rounded-2xl border border-border bg-card p-6 md:p-8">
+          <div class="mb-8 rounded-lg border border-border bg-card p-6 md:p-8">
             <div class="flex items-start justify-between gap-4 mb-4">
               <div>
                 <h1 class="text-3xl md:text-4xl font-bold text-foreground mb-2">
