@@ -79,6 +79,7 @@ The application includes built-in search and sorting capabilities:
 **Search:** Users can search plans by title or description in real-time.
 
 **Sorting Options:** Plans can be sorted by:
+
 - Date added (newest or oldest)
 - Name (alphabetical or reverse)
 - Difficulty (beginner to advanced or vice versa)

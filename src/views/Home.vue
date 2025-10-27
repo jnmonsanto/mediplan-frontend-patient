@@ -94,19 +94,27 @@ const filteredAndSortedPlans = computed(() => {
   return filtered.sort((a, b) => {
     switch (sortBy.value) {
       case "dateAdded":
-        return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+        return (
+          new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+        );
       case "dateAddedOld":
-        return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime();
+        return (
+          new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
+        );
       case "name":
         return a.title.localeCompare(b.title);
       case "nameDesc":
         return b.title.localeCompare(a.title);
       case "difficulty":
-        return difficultyOrder[a.difficulty as keyof typeof difficultyOrder] -
-          difficultyOrder[b.difficulty as keyof typeof difficultyOrder];
+        return (
+          difficultyOrder[a.difficulty as keyof typeof difficultyOrder] -
+          difficultyOrder[b.difficulty as keyof typeof difficultyOrder]
+        );
       case "difficultyDesc":
-        return difficultyOrder[b.difficulty as keyof typeof difficultyOrder] -
-          difficultyOrder[a.difficulty as keyof typeof difficultyOrder];
+        return (
+          difficultyOrder[b.difficulty as keyof typeof difficultyOrder] -
+          difficultyOrder[a.difficulty as keyof typeof difficultyOrder]
+        );
       case "duration":
         return calculatePlanDuration(a) - calculatePlanDuration(b);
       case "durationDesc":

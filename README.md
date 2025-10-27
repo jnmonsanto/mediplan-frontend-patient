@@ -144,6 +144,7 @@ MediPlan includes powerful search and filtering capabilities to help users find 
 ### Search Plans
 
 Users can search for plans by name or description using the search bar on the home page:
+
 - Real-time filtering as you type
 - Searches across plan title and description fields
 - Case-insensitive matching
@@ -177,6 +178,7 @@ The search and sort controls adapt to different screen sizes:
 - **Desktop** (> 1024px): Search bar takes 2/3 width, sort dropdown takes 1/3 width
 
 The responsive layout is implemented using Tailwind CSS utility classes:
+
 ```html
 <div class="flex flex-col md:flex-row gap-3">
   <div class="relative w-full md:w-1/2 lg:w-2/3">
