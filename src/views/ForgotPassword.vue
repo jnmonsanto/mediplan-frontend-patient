@@ -111,8 +111,7 @@ const handleReset = async () => {
       "Password reset link has been sent to your email. Please check your inbox.";
     email.value = "";
   } catch (error) {
-    errorMessage.value =
-      "An error occurred. Please try again later.";
+    errorMessage.value = "An error occurred. Please try again later.";
     console.error("Reset error:", error);
   } finally {
     isLoading.value = false;

@@ -36,220 +36,222 @@
         class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 bg-white rounded-lg shadow-xl z-50 border border-border"
         @click.stop
       >
-      <!-- Header -->
-      <div class="px-6 py-4 border-b border-border flex items-center justify-between">
-        <h2 class="text-xl font-bold text-foreground">Profile</h2>
-        <button
-          @click="isOpen = false"
-          class="rounded-lg p-1 text-neutral-500 hover:text-neutral-700 transition-colors"
+        <!-- Header -->
+        <div
+          class="px-6 py-4 border-b border-border flex items-center justify-between"
         >
-          <svg
-            class="h-6 w-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
+          <h2 class="text-xl font-bold text-foreground">Profile</h2>
+          <button
+            @click="isOpen = false"
+            class="rounded-lg p-1 text-neutral-500 hover:text-neutral-700 transition-colors"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        </button>
-      </div>
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
 
-      <!-- Tabs -->
-      <div class="flex gap-0 border-b border-border">
-        <button
-          @click="activeTab = 'patient'"
-          :class="[
-            'flex-1 px-4 py-3 font-medium text-sm transition-colors',
-            activeTab === 'patient'
-              ? 'text-primary-600 border-b-2 border-primary-600'
-              : 'text-neutral-500 hover:text-neutral-700',
-          ]"
-        >
-          Patient
-        </button>
-        <button
-          @click="activeTab = 'doctor'"
-          :class="[
-            'flex-1 px-4 py-3 font-medium text-sm transition-colors',
-            activeTab === 'doctor'
-              ? 'text-primary-600 border-b-2 border-primary-600'
-              : 'text-neutral-500 hover:text-neutral-700',
-          ]"
-        >
-          Doctor
-        </button>
-      </div>
+        <!-- Tabs -->
+        <div class="flex gap-0 border-b border-border">
+          <button
+            @click="activeTab = 'patient'"
+            :class="[
+              'flex-1 px-4 py-3 font-medium text-sm transition-colors',
+              activeTab === 'patient'
+                ? 'text-primary-600 border-b-2 border-primary-600'
+                : 'text-neutral-500 hover:text-neutral-700',
+            ]"
+          >
+            Patient
+          </button>
+          <button
+            @click="activeTab = 'doctor'"
+            :class="[
+              'flex-1 px-4 py-3 font-medium text-sm transition-colors',
+              activeTab === 'doctor'
+                ? 'text-primary-600 border-b-2 border-primary-600'
+                : 'text-neutral-500 hover:text-neutral-700',
+            ]"
+          >
+            Doctor
+          </button>
+        </div>
 
-      <!-- Content -->
-      <div class="px-6 py-6 max-h-96 overflow-y-auto space-y-4">
-        <!-- Patient Tab -->
-        <div v-if="activeTab === 'patient'" class="space-y-4">
-          <!-- Patient Photo -->
-          <div class="flex justify-center mb-4">
-            <img
-              v-if="currentUser?.photo"
-              :src="currentUser.photo"
-              :alt="currentUser.name"
-              class="rounded-full object-cover border-2 border-primary-200"
-              width="96"
-              height="96"
-            />
+        <!-- Content -->
+        <div class="px-6 py-6 max-h-96 overflow-y-auto space-y-4">
+          <!-- Patient Tab -->
+          <div v-if="activeTab === 'patient'" class="space-y-4">
+            <!-- Patient Photo -->
+            <div class="flex justify-center mb-4">
+              <img
+                v-if="currentUser?.photo"
+                :src="currentUser.photo"
+                :alt="currentUser.name"
+                class="rounded-full object-cover border-2 border-primary-200"
+                width="96"
+                height="96"
+              />
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-neutral-500 mb-1">
+                Name
+              </label>
+              <p class="text-foreground font-medium">
+                {{ currentUser?.name }}
+              </p>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-neutral-500 mb-1">
+                Email
+              </label>
+              <p class="text-foreground font-medium">
+                {{ currentUser?.email }}
+              </p>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-neutral-500 mb-1">
+                Phone
+              </label>
+              <p class="text-foreground font-medium">
+                {{ currentUser?.phone || "N/A" }}
+              </p>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-neutral-500 mb-1">
+                Address
+              </label>
+              <p class="text-foreground font-medium">
+                {{ currentUser?.address || "N/A" }}
+              </p>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-neutral-500 mb-1">
+                SNS ID
+              </label>
+              <p class="text-foreground font-medium">
+                {{ currentUser?.snsId }}
+              </p>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-neutral-500 mb-1">
+                Doctor
+              </label>
+              <p class="text-foreground font-medium">
+                {{ doctor?.name }}
+              </p>
+            </div>
           </div>
 
-          <div>
-            <label class="block text-xs font-semibold text-neutral-500 mb-1">
-              Name
-            </label>
-            <p class="text-foreground font-medium">
-              {{ currentUser?.name }}
-            </p>
-          </div>
+          <!-- Doctor Tab -->
+          <div v-if="activeTab === 'doctor'" class="space-y-4">
+            <!-- Doctor Photo -->
+            <div class="flex justify-center mb-4">
+              <img
+                v-if="doctor?.photo"
+                :src="doctor.photo"
+                :alt="doctor.name"
+                class="rounded-full object-cover border-2 border-primary-200"
+                width="96"
+                height="96"
+              />
+            </div>
 
-          <div>
-            <label class="block text-xs font-semibold text-neutral-500 mb-1">
-              Email
-            </label>
-            <p class="text-foreground font-medium">
-              {{ currentUser?.email }}
-            </p>
-          </div>
+            <div>
+              <label class="block text-xs font-semibold text-neutral-500 mb-1">
+                Name
+              </label>
+              <p class="text-foreground font-medium">
+                {{ doctor?.name }}
+              </p>
+            </div>
 
-          <div>
-            <label class="block text-xs font-semibold text-neutral-500 mb-1">
-              Phone
-            </label>
-            <p class="text-foreground font-medium">
-              {{ currentUser?.phone || "N/A" }}
-            </p>
-          </div>
+            <div>
+              <label class="block text-xs font-semibold text-neutral-500 mb-1">
+                Specialization
+              </label>
+              <p class="text-foreground font-medium">
+                {{ doctor?.specialization }}
+              </p>
+            </div>
 
-          <div>
-            <label class="block text-xs font-semibold text-neutral-500 mb-1">
-              Address
-            </label>
-            <p class="text-foreground font-medium">
-              {{ currentUser?.address || "N/A" }}
-            </p>
-          </div>
+            <div>
+              <label class="block text-xs font-semibold text-neutral-500 mb-1">
+                Age
+              </label>
+              <p class="text-foreground font-medium">
+                {{ doctor?.age }}
+              </p>
+            </div>
 
-          <div>
-            <label class="block text-xs font-semibold text-neutral-500 mb-1">
-              SNS ID
-            </label>
-            <p class="text-foreground font-medium">
-              {{ currentUser?.snsId }}
-            </p>
-          </div>
+            <div>
+              <label class="block text-xs font-semibold text-neutral-500 mb-1">
+                Email
+              </label>
+              <p class="text-foreground font-medium">
+                {{ doctor?.email }}
+              </p>
+            </div>
 
-          <div>
-            <label class="block text-xs font-semibold text-neutral-500 mb-1">
-              Doctor
-            </label>
-            <p class="text-foreground font-medium">
-              {{ doctor?.name }}
-            </p>
+            <div>
+              <label class="block text-xs font-semibold text-neutral-500 mb-1">
+                Phone
+              </label>
+              <p class="text-foreground font-medium">
+                {{ doctor?.phone || "N/A" }}
+              </p>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-neutral-500 mb-1">
+                Address
+              </label>
+              <p class="text-foreground font-medium">
+                {{ doctor?.address || "N/A" }}
+              </p>
+            </div>
           </div>
         </div>
 
-        <!-- Doctor Tab -->
-        <div v-if="activeTab === 'doctor'" class="space-y-4">
-          <!-- Doctor Photo -->
-          <div class="flex justify-center mb-4">
-            <img
-              v-if="doctor?.photo"
-              :src="doctor.photo"
-              :alt="doctor.name"
-              class="rounded-full object-cover border-2 border-primary-200"
-              width="96"
-              height="96"
-            />
-          </div>
-
-          <div>
-            <label class="block text-xs font-semibold text-neutral-500 mb-1">
-              Name
-            </label>
-            <p class="text-foreground font-medium">
-              {{ doctor?.name }}
-            </p>
-          </div>
-
-          <div>
-            <label class="block text-xs font-semibold text-neutral-500 mb-1">
-              Specialization
-            </label>
-            <p class="text-foreground font-medium">
-              {{ doctor?.specialization }}
-            </p>
-          </div>
-
-          <div>
-            <label class="block text-xs font-semibold text-neutral-500 mb-1">
-              Age
-            </label>
-            <p class="text-foreground font-medium">
-              {{ doctor?.age }}
-            </p>
-          </div>
-
-          <div>
-            <label class="block text-xs font-semibold text-neutral-500 mb-1">
-              Email
-            </label>
-            <p class="text-foreground font-medium">
-              {{ doctor?.email }}
-            </p>
-          </div>
-
-          <div>
-            <label class="block text-xs font-semibold text-neutral-500 mb-1">
-              Phone
-            </label>
-            <p class="text-foreground font-medium">
-              {{ doctor?.phone || "N/A" }}
-            </p>
-          </div>
-
-          <div>
-            <label class="block text-xs font-semibold text-neutral-500 mb-1">
-              Address
-            </label>
-            <p class="text-foreground font-medium">
-              {{ doctor?.address || "N/A" }}
-            </p>
-          </div>
+        <!-- Logout Button -->
+        <div class="px-6 py-4 border-t border-border">
+          <button
+            @click="handleLogout"
+            class="w-full flex items-center justify-center rounded-lg border border-red-300 px-4 py-2 text-sm font-medium text-red-600 transition-colors hover:bg-red-50"
+          >
+            <svg
+              class="h-4 w-4 mr-[15px]"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+              />
+            </svg>
+            Logout
+          </button>
         </div>
       </div>
-
-      <!-- Logout Button -->
-      <div class="px-6 py-4 border-t border-border">
-        <button
-          @click="handleLogout"
-          class="w-full flex items-center justify-center rounded-lg border border-red-300 px-4 py-2 text-sm font-medium text-red-600 transition-colors hover:bg-red-50"
-        >
-          <svg
-            class="h-4 w-4 mr-[15px]"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
-            />
-          </svg>
-          Logout
-        </button>
-      </div>
-    </div>
     </Teleport>
   </div>
 </template>
