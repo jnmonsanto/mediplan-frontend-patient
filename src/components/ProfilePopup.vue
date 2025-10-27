@@ -64,7 +64,7 @@
       </div>
 
       <!-- Content -->
-      <div class="px-6 py-6 max-h-96 overflow-y-auto">
+      <div class="px-6 py-6 max-h-96 overflow-y-auto space-y-4">
         <!-- Patient Tab -->
         <div v-if="activeTab === 'patient'" class="space-y-4">
           <div>
@@ -179,16 +179,34 @@
           </div>
         </div>
       </div>
+
+      <!-- Logout Button -->
+      <div class="px-6 py-4 border-t border-border">
+        <button
+          @click="handleLogout"
+          class="w-full py-2 px-4 rounded-lg bg-red-50 text-red-600 font-medium hover:bg-red-100 transition-colors"
+        >
+          Logout
+        </button>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
+import { useRouter } from "vue-router";
 import useAuth from "../composables/useAuth";
 
+const router = useRouter();
 const isOpen = ref(false);
 const activeTab = ref<"patient" | "doctor">("patient");
 
-const { currentUser, doctor } = useAuth();
+const { currentUser, doctor, logout } = useAuth();
+
+const handleLogout = () => {
+  logout();
+  isOpen.value = false;
+  router.push("/login");
+};
 </script>
