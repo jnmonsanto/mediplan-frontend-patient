@@ -242,25 +242,59 @@ See `.env.example` for more options.
 
 ### Header
 
-Navigation component with app branding and links.
+Navigation component with app branding, profile icon, and responsive layout using max-width constraint for consistency.
+
+### Login View
+
+Authentication page with:
+- Email and password inputs
+- Demo credentials display
+- "Forgot Password?" link
+- Footer with version information
+
+### Forgot Password View
+
+Password reset page with:
+- Email input for password reset request
+- Success/error message display
+- "Back to Login" link
+- Consistent card layout
 
 ### Home View
 
-Main page displaying a grid of exercise plans with search functionality.
+Main page displaying a grid of exercise plans with:
+- Search functionality to filter plans
+- Responsive grid layout
+- Plan cards with difficulty badges
 
 ### Plan Detail View
 
 Detailed page showing:
-
 - Video player
 - Plan description and metadata
 - Complete exercise sequence
 - Quick tips sidebar
 - Start session button
 
+### ProfilePopup Component
+
+User profile modal featuring:
+- Circular user photos (patient and doctor)
+- Two tabs: Patient and Doctor information
+- Patient details: name, email, phone, address, SNS ID, doctor name
+- Doctor details: name, specialization, age, email, phone, address
+- Logout button with logout functionality
+- Close button for modal dismissal
+- Centered modal with dimmed background
+
 ### PlanCard
 
-Reusable card component for displaying plan previews in a grid.
+Reusable card component for displaying plan previews in a grid with:
+- Plan image with overlay
+- Difficulty badge
+- Plan title and description
+- Exercise count and duration
+- Hover effects
 
 ### ExerciseItem
 
