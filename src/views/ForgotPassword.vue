@@ -70,6 +70,13 @@
             </RouterLink>
           </p>
         </div>
+
+        <!-- Footer -->
+        <div class="mt-8 pt-6 border-t border-neutral-200">
+          <p class="text-xs text-neutral-500 text-center">
+            Multi-Doctor Management System • Version 1.0
+          </p>
+        </div>
       </div>
     </div>
   </div>
