@@ -1,7 +1,7 @@
 <template>
   <RouterLink
     :to="`/plan/${plan.id}`"
-    class="group relative overflow-hidden rounded-2xl bg-card shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105 no-underline block"
+    class="group relative overflow-hidden rounded-lg bg-card shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105 no-underline block"
   >
     <div
       class="relative h-48 overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10"
