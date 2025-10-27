@@ -1,7 +1,7 @@
 <template>
   <header
     :class="[
-      'sticky top-0 z-50 w-full border-b border-border bg-background backdrop-blur supports-[backdrop-filter]:bg-background transition-opacity duration-200',
+      'sticky top-0 z-50 w-full border-b border-border bg-background transition-opacity duration-200',
       profilePopupOpen ? 'opacity-50' : 'opacity-100'
     ]"
   >
