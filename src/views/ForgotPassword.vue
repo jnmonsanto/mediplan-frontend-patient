@@ -59,7 +59,7 @@
         </form>
 
         <!-- Back to Login Link -->
-        <div class="mt-6 pt-6 border-t border-neutral-200 text-center">
+        <div class="mt-6 pt-6 text-center">
           <p class="text-sm">
             <span class="text-neutral-600">Remember your password? </span>
             <RouterLink
