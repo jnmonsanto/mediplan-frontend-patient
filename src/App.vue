@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-background flex flex-col">
+  <div class="min-h-screen bg-neutral-50 flex flex-col">
     <router-view />
     <Footer />
   </div>
