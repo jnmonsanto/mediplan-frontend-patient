@@ -33,27 +33,25 @@ const router = createRouter({
   routes,
 });
 
+// Initialize auth on app load
+const { checkAuth } = useAuth();
+checkAuth();
+
 // Route guard to check authentication
 router.beforeEach((to, from, next) => {
-  const { checkAuth, isAuthenticated } = useAuth();
+  const { isAuthenticated } = useAuth();
 
-  // Check authentication status on every route change
-  checkAuth();
+  const requiresAuth = to.meta.requiresAuth !== false;
 
-  // Give a small delay to ensure auth state is updated
-  setTimeout(() => {
-    const requiresAuth = to.meta.requiresAuth !== false;
-
-    if (requiresAuth && !isAuthenticated.value) {
-      // Redirect to login if route requires auth and user is not authenticated
-      next("/login");
-    } else if (to.path === "/login" && isAuthenticated.value) {
-      // Redirect to home if user is logged in and trying to access login
-      next("/");
-    } else {
-      next();
-    }
-  }, 0);
+  if (requiresAuth && !isAuthenticated.value) {
+    // Redirect to login if route requires auth and user is not authenticated
+    next("/login");
+  } else if (to.path === "/login" && isAuthenticated.value) {
+    // Redirect to home if user is logged in and trying to access login
+    next("/");
+  } else {
+    next();
+  }
 });
 
 export default router;
