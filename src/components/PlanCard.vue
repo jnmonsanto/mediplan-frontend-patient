@@ -82,6 +82,7 @@
 <script setup lang="ts">
 import { RouterLink } from "vue-router";
 import type { Plan } from "../types";
+import { getPlanDurationInMinutes } from "../utils/duration";
 
 interface Props {
   plan: Plan;
@@ -98,4 +99,8 @@ const difficultyColors: Record<string, string> = {
 
 const capitalizeFirst = (str: string) =>
   str.charAt(0).toUpperCase() + str.slice(1);
+
+const getDurationInMinutes = () => getPlanDurationInMinutes(props.plan);
+
+const props = defineProps<Props>();
 </script>
