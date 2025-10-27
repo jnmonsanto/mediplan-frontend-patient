@@ -58,6 +58,16 @@
           >
             {{ isLoading ? "Logging in..." : "Login" }}
           </button>
+
+          <!-- Forgot Password Link -->
+          <div class="text-center">
+            <RouterLink
+              to="/forgot-password"
+              class="text-sm text-primary-600 font-semibold hover:text-primary-700 transition-colors"
+            >
+              Forgot Password?
+            </RouterLink>
+          </div>
         </form>
 
         <!-- Demo Credentials -->
