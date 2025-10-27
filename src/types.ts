@@ -55,8 +55,3 @@ export interface Plan {
   createdAt: Date;
   updatedAt: Date;
 }
-
-export interface SortOption {
-  label: string;
-  value: string;
-}
