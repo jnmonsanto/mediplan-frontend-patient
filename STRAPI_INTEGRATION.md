@@ -166,6 +166,7 @@ Each exercise should have:
 ### Layout Components
 
 The app uses consistent responsive padding:
+
 - Mobile: `px-4`
 - Tablet: `sm:px-6`
 - Desktop: `lg:px-8`
