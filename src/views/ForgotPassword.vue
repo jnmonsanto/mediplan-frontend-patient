@@ -17,7 +17,7 @@
           password.
         </p>
 
-        <form @submit.prevent="handleReset" class="space-y-4 mb-8">
+        <form @submit.prevent="handleReset" class="space-y-4 mb-4">
           <!-- Email Input -->
           <div>
             <label class="block text-sm font-medium text-foreground mb-2">
