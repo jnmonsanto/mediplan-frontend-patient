@@ -88,7 +88,7 @@ interface Props {
   plan: Plan;
 }
 
-defineProps<Props>();
+const props = defineProps<Props>();
 
 const difficultyColors: Record<string, string> = {
   beginner: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
@@ -101,6 +101,4 @@ const capitalizeFirst = (str: string) =>
   str.charAt(0).toUpperCase() + str.slice(1);
 
 const getDurationInMinutes = () => getPlanDurationInMinutes(props.plan);
-
-const props = defineProps<Props>();
 </script>
