@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-background">
+  <div class="min-h-screen">
     <Header />
 
     <main class="mx-auto max-w-7xl px-4 md:px-8 py-8 md:py-12 sm:px-6 lg:px-8">
