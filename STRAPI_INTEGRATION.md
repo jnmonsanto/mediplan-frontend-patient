@@ -101,8 +101,11 @@ async deletePlan(id: string): Promise<void>
 - **src/config/api.ts** - API configuration and endpoints
 - **src/services/plansService.ts** - Service layer for all API calls
 - **src/composables/usePlans.ts** - Vue composable for plans data fetching
+- **src/composables/useAuth.ts** - Vue composable for authentication
 - **src/data/mockPlans.ts** - Mock data (easily replaceable with API calls)
-- **src/types.ts** - TypeScript interfaces (Plan, Exercise, etc.)
+- **src/views/Home.vue** - Plans listing with search and sort functionality
+- **src/types.ts** - TypeScript interfaces (Plan, Exercise, Patient, Doctor, etc.)
+- **src/router.ts** - Route definitions and auth guards
 
 ## Expected Strapi Collection Structure
 
