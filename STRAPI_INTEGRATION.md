@@ -72,7 +72,21 @@ POST /auth/forgot-password
 - Unauthenticated users are redirected to `/login`
 - Auth status persists via localStorage
 
-### 4. Data Posting (Future)
+### 4. Frontend Search and Sorting
+
+The application includes built-in search and sorting capabilities:
+
+**Search:** Users can search plans by title or description in real-time.
+
+**Sorting Options:** Plans can be sorted by:
+- Date added (newest or oldest)
+- Name (alphabetical or reverse)
+- Difficulty (beginner to advanced or vice versa)
+- Duration (shortest to longest or vice versa)
+
+These features are implemented in `src/views/Home.vue` and work with both mock data and live Strapi data automatically.
+
+### 5. Data Posting (Future)
 
 When you're ready to add create/update functionality, extend the `plansService.ts` with new methods:
 
