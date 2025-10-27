@@ -6,7 +6,7 @@
       class="container mx-auto px-4 md:px-8 flex h-16 items-center justify-between"
     >
       <RouterLink to="/" class="no-underline">
-        <span class="text-lg font-bold text-primary-500">MediPlan</span>
+        <h1 class="text-xl text-primary-600" style="font-weight: 700;">MediPlan</h1>
       </RouterLink>
 
       <ProfilePopup />
