@@ -189,7 +189,7 @@
         <button
           @click="handleLogout"
           class="w-full flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium transition-colors"
-          :style="{ borderColor: '#dc2626', color: '#dc2626', border: '1px solid #dc2626' }"
+          :style="{ borderColor: '#dc2626', color: '#dc2626', border: '0.5px solid #dc2626' }"
           @mouseenter="$event.target.style.backgroundColor = '#fef2f2'"
           @mouseleave="$event.target.style.backgroundColor = 'transparent'"
         >
