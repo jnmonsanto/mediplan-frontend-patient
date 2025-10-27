@@ -19,8 +19,9 @@
         </div>
       </div>
 
-      <!-- Search Section -->
-      <div class="mb-8">
+      <!-- Search and Sort Section -->
+      <div class="mb-8 space-y-4">
+        <!-- Search -->
         <div class="relative">
           <input
             v-model="searchQuery"
@@ -28,6 +29,27 @@
             placeholder="Search exercise plans..."
             class="w-full px-4 py-3 rounded-lg border border-border bg-card text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
           />
+        </div>
+
+        <!-- Sort Filter -->
+        <div class="flex items-center gap-3">
+          <label for="sort-select" class="text-sm font-medium text-foreground">
+            Sort by:
+          </label>
+          <select
+            id="sort-select"
+            v-model="sortBy"
+            class="px-4 py-2 rounded-lg border border-border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+          >
+            <option value="dateAdded">Date Added (Newest)</option>
+            <option value="dateAddedOld">Date Added (Oldest)</option>
+            <option value="name">Name (A-Z)</option>
+            <option value="nameDesc">Name (Z-A)</option>
+            <option value="difficulty">Difficulty (Beginner First)</option>
+            <option value="difficultyDesc">Difficulty (Advanced First)</option>
+            <option value="duration">Duration (Shortest)</option>
+            <option value="durationDesc">Duration (Longest)</option>
+          </select>
         </div>
       </div>
 
