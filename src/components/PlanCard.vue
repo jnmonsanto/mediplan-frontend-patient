@@ -58,7 +58,7 @@
             <span>{{ plan.exercises.length }} exercises</span>
           </div>
           <div class="flex items-center gap-1.5 text-neutral-500">
-            <span>{{ plan.duration }} min</span>
+            <span>{{ getDurationInMinutes() }} min</span>
           </div>
         </div>
         <svg
