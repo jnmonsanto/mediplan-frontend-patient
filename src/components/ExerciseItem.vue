@@ -9,7 +9,9 @@
     </div>
 
     <div class="flex-1">
-      <h4 class="font-semibold text-foreground">{{ exercise.exercise?.name }}</h4>
+      <h4 class="font-semibold text-foreground">
+        {{ exercise.exercise?.name }}
+      </h4>
       <p class="mt-1 text-sm text-neutral-500">
         {{ exercise.exercise?.description }}
       </p>
@@ -32,7 +34,10 @@
           <span class="text-muted-foreground">{{ exercise.duration }}s</span>
         </div>
 
-        <div v-if="exercise.sets && exercise.sets > 0" class="flex items-center gap-1.5 text-xs">
+        <div
+          v-if="exercise.sets && exercise.sets > 0"
+          class="flex items-center gap-1.5 text-xs"
+        >
           <svg
             class="h-4 w-4 text-primary-600"
             fill="none"
@@ -49,7 +54,10 @@
           <span class="text-muted-foreground">{{ exercise.sets }} sets</span>
         </div>
 
-        <div v-if="exercise.repetitions && exercise.repetitions > 0" class="flex items-center gap-1.5 text-xs">
+        <div
+          v-if="exercise.repetitions && exercise.repetitions > 0"
+          class="flex items-center gap-1.5 text-xs"
+        >
           <svg
             class="h-4 w-4 text-primary-600"
             fill="none"
@@ -63,7 +71,9 @@
               d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
             />
           </svg>
-          <span class="text-muted-foreground">{{ exercise.repetitions }} reps</span>
+          <span class="text-muted-foreground"
+            >{{ exercise.repetitions }} reps</span
+          >
         </div>
       </div>
     </div>

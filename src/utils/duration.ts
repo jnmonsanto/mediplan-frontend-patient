@@ -7,7 +7,10 @@ export function calculatePlanDuration(plan: Plan): number {
   if (!plan.exercises || plan.exercises.length === 0) {
     return 0;
   }
-  return plan.exercises.reduce((total, exercise) => total + exercise.duration, 0);
+  return plan.exercises.reduce(
+    (total, exercise) => total + exercise.duration,
+    0,
+  );
 }
 
 /**
