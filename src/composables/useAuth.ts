@@ -9,7 +9,8 @@ const loggedInPatient: Patient = {
   email: "john@example.com",
   phone: "+1 (555) 987-6543",
   address: "456 Main St, Boston, MA 02116",
-  photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop",
+  photo:
+    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop",
   snsId: "SNS-123456",
 };
 
@@ -20,7 +21,8 @@ const assignedDoctor: Doctor = {
   email: "sarah@mediplan.com",
   phone: "+1 (555) 123-4567",
   address: "123 Medical Center Dr, Boston, MA 02115",
-  photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop",
+  photo:
+    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop",
   specialization: "Sports Medicine",
   age: 42,
 };

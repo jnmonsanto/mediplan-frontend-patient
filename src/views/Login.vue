@@ -1,5 +1,7 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-primary-50 to-primary-100 flex items-center justify-center px-4">
+  <div
+    class="min-h-screen bg-gradient-to-br from-primary-50 to-primary-100 flex items-center justify-center px-4"
+  >
     <div class="w-full max-w-md">
       <!-- Logo -->
       <div class="text-center mb-8">
@@ -41,7 +43,10 @@
           </div>
 
           <!-- Error Message -->
-          <div v-if="errorMessage" class="bg-red-50 border border-red-200 rounded-lg p-3">
+          <div
+            v-if="errorMessage"
+            class="bg-red-50 border border-red-200 rounded-lg p-3"
+          >
             <p class="text-sm text-red-600">{{ errorMessage }}</p>
           </div>
 
@@ -57,7 +62,9 @@
 
         <!-- Demo Credentials -->
         <div class="mt-6 pt-6 border-t border-neutral-200">
-          <p class="text-xs text-neutral-600 text-center mb-3">Demo Credentials:</p>
+          <p class="text-xs text-neutral-600 text-center mb-3">
+            Demo Credentials:
+          </p>
           <div class="bg-neutral-50 rounded-lg p-3 space-y-2">
             <div class="text-xs">
               <p class="font-semibold text-neutral-700">Patient</p>

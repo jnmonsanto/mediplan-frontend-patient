@@ -45,7 +45,7 @@
             'flex-1 px-4 py-3 font-medium text-sm transition-colors',
             activeTab === 'patient'
               ? 'text-primary-600 border-b-2 border-primary-600'
-              : 'text-neutral-500 hover:text-neutral-700'
+              : 'text-neutral-500 hover:text-neutral-700',
           ]"
         >
           Patient
@@ -56,7 +56,7 @@
             'flex-1 px-4 py-3 font-medium text-sm transition-colors',
             activeTab === 'doctor'
               ? 'text-primary-600 border-b-2 border-primary-600'
-              : 'text-neutral-500 hover:text-neutral-700'
+              : 'text-neutral-500 hover:text-neutral-700',
           ]"
         >
           Doctor
