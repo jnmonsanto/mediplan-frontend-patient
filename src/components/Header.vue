@@ -18,9 +18,9 @@
 </template>
 
 <script setup lang="ts">
-import { inject } from "vue";
 import { RouterLink } from "vue-router";
 import ProfilePopup from "./ProfilePopup.vue";
+import { useProfilePopup } from "../composables/useProfilePopup";
 
-const profilePopupOpen = inject<any>("profilePopupOpen");
+const { profilePopupOpen } = useProfilePopup();
 </script>
