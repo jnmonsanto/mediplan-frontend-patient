@@ -44,10 +44,15 @@ MediPlan is a responsive healthcare application that allows users to browse and 
 - 🔑 Password reset functionality
 - 👤 User profile with patient and doctor information
 - 📋 Browse multiple exercise plans with difficulty levels
-- 🔍 Search functionality to filter plans
+- 🔍 Search functionality to filter plans by name and description
+- 📊 Sort and filter plans by:
+  - Date added (newest or oldest)
+  - Name (alphabetical or reverse)
+  - Difficulty level (beginner to advanced or vice versa)
+  - Duration (shortest to longest or vice versa)
 - 📺 Video player for demonstration
 - 💪 Detailed exercise sequences with metadata
-- 📱 Fully responsive design
+- 📱 Fully responsive design with adaptive layouts
 - 🎨 Modern healthcare-themed UI
 - 🔌 Pre-configured for Strapi backend integration
 - 🛡️ Route guards for authenticated pages
