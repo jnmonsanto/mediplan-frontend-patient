@@ -216,9 +216,10 @@
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import useAuth from "../composables/useAuth";
+import { useProfilePopup } from "../composables/useProfilePopup";
 
 const router = useRouter();
-const isOpen = ref(false);
+const { profilePopupOpen: isOpen } = useProfilePopup();
 const activeTab = ref<"patient" | "doctor">("patient");
 
 const { currentUser, doctor, logout } = useAuth();
