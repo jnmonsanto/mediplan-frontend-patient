@@ -74,8 +74,10 @@ import { ref, computed, onMounted } from "vue";
 import Header from "../components/Header.vue";
 import PlanCard from "../components/PlanCard.vue";
 import usePlans from "../composables/usePlans";
+import { calculatePlanDuration } from "../utils/duration";
 
 const searchQuery = ref("");
+const sortBy = ref("dateAdded");
 const { plans, fetchPlans } = usePlans();
 
 // Fetch plans on component mount
@@ -83,11 +85,42 @@ onMounted(() => {
   fetchPlans();
 });
 
-const filteredPlans = computed(() =>
-  plans.value.filter(
+const difficultyOrder = { beginner: 0, intermediate: 1, advanced: 2 };
+
+const filteredAndSortedPlans = computed(() => {
+  // First, filter by search query
+  const filtered = plans.value.filter(
     (plan) =>
       plan.title.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
       plan.description.toLowerCase().includes(searchQuery.value.toLowerCase()),
-  ),
-);
+  );
+
+  // Then, apply sorting
+  return filtered.sort((a, b) => {
+    switch (sortBy.value) {
+      case "dateAdded":
+        return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+      case "dateAddedOld":
+        return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime();
+      case "name":
+        return a.title.localeCompare(b.title);
+      case "nameDesc":
+        return b.title.localeCompare(a.title);
+      case "difficulty":
+        return difficultyOrder[a.difficulty as keyof typeof difficultyOrder] -
+          difficultyOrder[b.difficulty as keyof typeof difficultyOrder];
+      case "difficultyDesc":
+        return difficultyOrder[b.difficulty as keyof typeof difficultyOrder] -
+          difficultyOrder[a.difficulty as keyof typeof difficultyOrder];
+      case "duration":
+        return calculatePlanDuration(a) - calculatePlanDuration(b);
+      case "durationDesc":
+        return calculatePlanDuration(b) - calculatePlanDuration(a);
+      default:
+        return 0;
+    }
+  });
+});
+
+const filteredPlans = filteredAndSortedPlans;
 </script>
