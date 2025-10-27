@@ -33,7 +33,7 @@
       <!-- Popup Modal Content -->
       <div
         v-if="isOpen"
-        class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 bg-white rounded-2xl shadow-xl z-50 border border-border"
+        class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 bg-white rounded-lg shadow-xl z-50 border border-border"
         @click.stop
       >
       <!-- Header -->
