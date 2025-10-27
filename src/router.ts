@@ -40,17 +40,20 @@ router.beforeEach((to, from, next) => {
   // Check authentication status on every route change
   checkAuth();
 
-  const requiresAuth = to.meta.requiresAuth !== false;
+  // Give a small delay to ensure auth state is updated
+  setTimeout(() => {
+    const requiresAuth = to.meta.requiresAuth !== false;
 
-  if (requiresAuth && !isAuthenticated.value) {
-    // Redirect to login if route requires auth and user is not authenticated
-    next("/login");
-  } else if (to.path === "/login" && isAuthenticated.value) {
-    // Redirect to home if user is logged in and trying to access login
-    next("/");
-  } else {
-    next();
-  }
+    if (requiresAuth && !isAuthenticated.value) {
+      // Redirect to login if route requires auth and user is not authenticated
+      next("/login");
+    } else if (to.path === "/login" && isAuthenticated.value) {
+      // Redirect to home if user is logged in and trying to access login
+      next("/");
+    } else {
+      next();
+    }
+  }, 0);
 });
 
 export default router;
