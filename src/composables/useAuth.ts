@@ -48,25 +48,14 @@ export function useAuth() {
     localStorage.removeItem("isAuthenticated");
   };
 
-  const checkAuth = () => {
+  const initializeAuth = () => {
     const auth = localStorage.getItem("isAuthenticated");
     if (auth === "true") {
       isAuthenticated.value = true;
       currentUser.value = loggedInPatient;
     } else {
-      // Check if we should skip auto-login (e.g., for login preview)
-      const params = new URLSearchParams(window.location.search);
-      const skipAuth = params.has("skipAuth");
-
-      if (!skipAuth) {
-        // Auto-login with demo credentials on first load
-        isAuthenticated.value = true;
-        currentUser.value = loggedInPatient;
-        localStorage.setItem("isAuthenticated", "true");
-      } else {
-        isAuthenticated.value = false;
-        currentUser.value = null;
-      }
+      isAuthenticated.value = false;
+      currentUser.value = null;
     }
   };
 
