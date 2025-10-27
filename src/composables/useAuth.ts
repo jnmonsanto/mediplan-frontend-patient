@@ -65,7 +65,7 @@ export function useAuth() {
     doctor: computed(() => doctor.value),
     login,
     logout,
-    checkAuth,
+    initializeAuth,
   };
 }
 
