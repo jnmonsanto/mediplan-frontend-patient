@@ -6,9 +6,9 @@ This MediPlan application is pre-configured to work with a Strapi.js (Node) back
 
 Experience MediPlan in action:
 
-- **Login Screen**: [Try Demo Login](https://808e5f7a97f843f78cce7a00386948cf-2d559e7e06c54b458400d3111.projects.builder.codes/login?skipAuth=true) (authenticate with demo credentials: john@example.com / demo123)
-- **Dashboard**: [View Exercise Plans Dashboard](https://808e5f7a97f843f78cce7a00386948cf-2d559e7e06c54b458400d3111.projects.builder.codes/) (auto-authenticated)
-- **Plan Preview**: [View Sample Plan Details](https://808e5f7a97f843f78cce7a00386948cf-2d559e7e06c54b458400d3111.projects.builder.codes/plan/1)
+- **Login Screen**: [Try Demo Login](https://808e5f7a97f843f78cce7a00386948cf-2d559e7e06c54b458400d3111.fly.dev/login?skipAuth=true) (authenticate with demo credentials: john@example.com / demo123)
+- **Dashboard**: [View Exercise Plans Dashboard](https://808e5f7a97f843f78cce7a00386948cf-2d559e7e06c54b458400d3111.fly.dev/) (auto-authenticated)
+- **Plan Preview**: [View Sample Plan Details](https://808e5f7a97f843f78cce7a00386948cf-2d559e7e06c54b458400d3111.fly.dev/plan/1)
 
 ## Current State
 
