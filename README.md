@@ -334,7 +334,11 @@ See `.env.example` for more options.
 
 ### Header
 
-Navigation component with app branding, profile icon, and responsive layout using max-width constraint for consistency.
+Navigation component with app branding, profile icon, and responsive layout using max-width constraint for consistency. Sticky positioning with white background and subtle shadow.
+
+### Footer
+
+Application footer component displaying "Developed at FCTUC" with the current year. Automatically updates the year using `new Date().getFullYear()`. Consistent styling with max-width constraint matching the header and content areas.
 
 ### Login View
 
