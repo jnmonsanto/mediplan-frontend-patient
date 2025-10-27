@@ -1,0 +1,194 @@
+<template>
+  <div class="relative">
+    <!-- Profile Icon Button -->
+    <button
+      @click="isOpen = !isOpen"
+      class="flex items-center justify-center w-10 h-10 rounded-full bg-primary-100 text-primary-600 hover:bg-primary-200 transition-colors"
+      title="Profile"
+    >
+      <svg
+        class="h-6 w-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+        />
+      </svg>
+    </button>
+
+    <!-- Popup Modal -->
+    <div
+      v-if="isOpen"
+      class="fixed inset-0 z-40 bg-black/50"
+      @click="isOpen = false"
+    />
+
+    <div
+      v-if="isOpen"
+      class="absolute right-0 mt-2 w-96 bg-white rounded-2xl shadow-xl z-50 border border-border"
+    >
+      <!-- Header -->
+      <div class="px-6 py-4 border-b border-border">
+        <h2 class="text-xl font-bold text-foreground">Profile</h2>
+      </div>
+
+      <!-- Tabs -->
+      <div class="flex gap-0 border-b border-border">
+        <button
+          @click="activeTab = 'patient'"
+          :class="[
+            'flex-1 px-4 py-3 font-medium text-sm transition-colors',
+            activeTab === 'patient'
+              ? 'text-primary-600 border-b-2 border-primary-600'
+              : 'text-neutral-500 hover:text-neutral-700'
+          ]"
+        >
+          Patient
+        </button>
+        <button
+          @click="activeTab = 'doctor'"
+          :class="[
+            'flex-1 px-4 py-3 font-medium text-sm transition-colors',
+            activeTab === 'doctor'
+              ? 'text-primary-600 border-b-2 border-primary-600'
+              : 'text-neutral-500 hover:text-neutral-700'
+          ]"
+        >
+          Doctor
+        </button>
+      </div>
+
+      <!-- Content -->
+      <div class="px-6 py-6 max-h-96 overflow-y-auto">
+        <!-- Patient Tab -->
+        <div v-if="activeTab === 'patient'" class="space-y-4">
+          <div>
+            <label class="block text-xs font-semibold text-neutral-500 mb-1">
+              Name
+            </label>
+            <p class="text-foreground font-medium">
+              {{ currentUser?.name }}
+            </p>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-neutral-500 mb-1">
+              Email
+            </label>
+            <p class="text-foreground font-medium">
+              {{ currentUser?.email }}
+            </p>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-neutral-500 mb-1">
+              Phone
+            </label>
+            <p class="text-foreground font-medium">
+              {{ currentUser?.phone || "N/A" }}
+            </p>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-neutral-500 mb-1">
+              Address
+            </label>
+            <p class="text-foreground font-medium">
+              {{ currentUser?.address || "N/A" }}
+            </p>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-neutral-500 mb-1">
+              SNS ID
+            </label>
+            <p class="text-foreground font-medium">
+              {{ currentUser?.snsId }}
+            </p>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-neutral-500 mb-1">
+              Doctor
+            </label>
+            <p class="text-foreground font-medium">
+              {{ doctor?.name }}
+            </p>
+          </div>
+        </div>
+
+        <!-- Doctor Tab -->
+        <div v-if="activeTab === 'doctor'" class="space-y-4">
+          <div>
+            <label class="block text-xs font-semibold text-neutral-500 mb-1">
+              Name
+            </label>
+            <p class="text-foreground font-medium">
+              {{ doctor?.name }}
+            </p>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-neutral-500 mb-1">
+              Specialization
+            </label>
+            <p class="text-foreground font-medium">
+              {{ doctor?.specialization }}
+            </p>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-neutral-500 mb-1">
+              Age
+            </label>
+            <p class="text-foreground font-medium">
+              {{ doctor?.age }}
+            </p>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-neutral-500 mb-1">
+              Email
+            </label>
+            <p class="text-foreground font-medium">
+              {{ doctor?.email }}
+            </p>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-neutral-500 mb-1">
+              Phone
+            </label>
+            <p class="text-foreground font-medium">
+              {{ doctor?.phone || "N/A" }}
+            </p>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-neutral-500 mb-1">
+              Address
+            </label>
+            <p class="text-foreground font-medium">
+              {{ doctor?.address || "N/A" }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { ref } from "vue";
+import useAuth from "../composables/useAuth";
+
+const isOpen = ref(false);
+const activeTab = ref<"patient" | "doctor">("patient");
+
+const { currentUser, doctor } = useAuth();
+</script>
