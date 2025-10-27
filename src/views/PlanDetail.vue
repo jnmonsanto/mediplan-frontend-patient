@@ -79,7 +79,7 @@
                 <div>
                   <p class="text-xs text-neutral-500">Duration</p>
                   <p class="font-semibold text-primary-700">
-                    {{ plan.duration }} minutes
+                    {{ getPlanDurationInMinutes(plan) }} minutes
                   </p>
                 </div>
               </div>
