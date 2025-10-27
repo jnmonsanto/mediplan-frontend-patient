@@ -125,7 +125,7 @@
 
         <!-- Sidebar -->
         <div class="lg:sticky lg:top-24 lg:h-fit">
-          <div class="rounded-2xl border border-border bg-card p-6">
+          <div class="rounded-lg border border-border bg-card p-6">
             <div class="mb-6">
               <h3 class="font-semibold text-foreground mb-3">Quick Tips</h3>
               <ul class="space-y-3 text-sm text-neutral-500">
