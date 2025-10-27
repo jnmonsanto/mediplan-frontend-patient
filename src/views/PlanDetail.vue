@@ -30,7 +30,7 @@
           <!-- Video Container -->
           <div class="mb-8">
             <div
-              class="relative w-full rounded-2xl overflow-hidden bg-black aspect-video"
+              class="relative w-full rounded-lg overflow-hidden bg-black aspect-video"
             >
               <video controls class="w-full h-full" :poster="plan.imageUrl">
                 <source :src="plan.videoUrl" type="video/mp4" />
